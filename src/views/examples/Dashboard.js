@@ -226,21 +226,21 @@ export default function Dash(){
 
   const [getdealdetails, setdealdetails] = useState ([]);
 
-    useEffect(()=>{
-        fetch('http://127.0.0.1:8000/core/demo',{
-          method:"GET",
-        })
-        .then(Res=>Res.json())
-        .then(response=>{
-          const obj1 = JSON.stringify(response)
-          const output1 = JSON.parse(obj1)
+    // useEffect(()=>{
+    //     fetch('http://127.0.0.1:8000/core/demo',{
+    //       method:"GET",
+    //     })
+    //     .then(Res=>Res.json())
+    //     .then(response=>{
+    //       const obj1 = JSON.stringify(response)
+    //       const output1 = JSON.parse(obj1)
           
-          setdealdetails(output1)
-          console.log("result",output1)
+    //       setdealdetails(output1)
+    //       console.log("result",output1)
           
-        });
+    //     });
        
-      },[])
+    //   },[])
 
   const [selectedOptions, setSelectedOptions] = useState([]);
 
@@ -283,12 +283,12 @@ export default function Dash(){
             </Row>
 
             <Row className="mt-1">
-              {getdealdetails.map((item, index)=>(
-                <Col key={index}>
+              {/* {getdealdetails.map((item, index)=>( */}
+                <Col >
                 <Card style={{backgroundColor:""}}>
                 <Row>
                     <Col className="justify-content-center d-flex" >
-                    <h1 className="">{item.firstname}</h1>
+                    <h1 className="">100</h1>
                     </Col>
                   </Row>
                   <Row>
@@ -301,7 +301,7 @@ export default function Dash(){
                 </Card>
                   
                 </Col>
-              ))}
+              {/* ))} */}
 
            <Col>
            <Card style={{backgroundColor:""}}>

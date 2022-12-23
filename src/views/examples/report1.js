@@ -10,16 +10,16 @@ import {MdMarkEmailUnread} from 'react-icons/md'
 
 
 
-import Recepient from "../../../src/assets/img/brand/Recepient.png"
-import Delivery from "../../../src/assets/img/brand/Email Delivery.png"
-import Open from "../../../src/assets/img/brand/Email Open.png"
-import Unopen from "../../../src/assets/img/brand/Email Unopen.png"
-import Click from "../../../src/assets/img/brand/Email Clicked.png"
-import Unclick from "../../../src/assets/img/brand/Email Unclicked.png"
-import Bounce from "../../../src/assets/img/brand/Bounce.png"
-import Average from "../../../src/assets/img/brand/Average user.png"
-import New from "../../../src/assets/img/brand/New Users.png"
-import Old from "../../../src/assets/img/brand/User.png"
+import Recepient from "../../../src/assets/img/brand/Recepients.png"
+import Delivery from "../../../src/assets/img/brand/Deliverys.png"
+import Open from "../../../src/assets/img/brand/Opens.png"
+import Unopen from "../../../src/assets/img/brand/Unopen.png"
+import Click from "../../../src/assets/img/brand/Clicked.png"
+import Unclick from "../../../src/assets/img/brand/unclicked.png"
+import Bounce from "../../../src/assets/img/brand/Bounced.png"
+import Average from "../../../src/assets/img/brand/Average.png"
+import New from "../../../src/assets/img/brand/Old.png"
+import Old from "../../../src/assets/img/brand/new.png"
 
 
 const seriesarea= [{
@@ -126,12 +126,15 @@ const table = [{
 },
 
 ]
-const series11= [44, 55, 13, 43, 22]
+const seriesdount= [44, 55, 13, 43, 22]
 
-const options11= {
+const optionsdount= {
   chart: {
     width: 380,
     type: 'pie',
+  },
+  stroke: {
+    width: 0
   },
   labels: ['Campign 1', 'Campign 2', 'Campign 3', 'Campign 4 ', 'Campign 5'],
   colors:["#6f42c1", "#007bff","#17a2b8", "#00cccc", "#adb2bd"],
@@ -140,6 +143,58 @@ const options11= {
       donut: {
         size: '65%'
       }
+    }
+  },
+  legend: {
+    display: true,
+    position: "bottom",
+    labels: {
+    
+    colors:"white",
+    
+    }
+  },
+  responsive: [{
+    breakpoint: 480,
+    options: {
+      chart: {
+        width: 200
+      },
+      legend: {
+        position: 'bottom'
+      }
+    }
+  }]
+}
+
+const series11= [44, 55, 13, 43, 22]
+
+
+
+const options11= {
+  chart: {
+    width: 380,
+    type: 'pie',
+  },
+  stroke: {
+    width: 0
+  },
+  labels: ['Campign 1', 'Campign 2', 'Campign 3', 'Campign 4 ', 'Campign 5'],
+  colors:["#6f42c1", "#007bff","#17a2b8", "#00cccc", "#adb2bd"],
+  plotOptions: {
+    pie: {
+      donut: {
+        size: '65%'
+      }
+    }
+  },
+  legend: {
+    display: true,
+    position: "bottom",
+    labels: {
+    
+    colors:"white",
+    
     }
   },
   responsive: [{
@@ -175,26 +230,62 @@ const options111={
     width: [0, 4]
   },
   title: {
-    text: 'Users'
+    text: 'Users',
+    style:{
+     color:"white",
+    },
   },
   dataLabels: {
     enabled: true,
     enabledOnSeries: [1]
   },
+  legend: {
+    display: true,
+    position: "bottom",
+    labels: {
+    
+    colors:"white",
+    
+    }
+  },
   labels: ['01 Jan 2001', '02 Jan 2001', '03 Jan 2001', '04 Jan 2001', '05 Jan 2001', '06 Jan 2001', '07 Jan 2001', '08 Jan 2001', '09 Jan 2001', '10 Jan 2001', '11 Jan 2001', '12 Jan 2001'],
   xaxis: {
-    type: 'datetime'
+    type: 'datetime',
+    labels:{
+      style:{
+        colors:"white",
+        
+      },
+},
   },
   yaxis: [{
     title: {
       text: 'New Users',
+      style:{
+        color:"white",
+      }
     },
+    labels:{
+      style:{
+        colors:"white",
+        
+      },
+},
   
   }, {
     opposite: true,
     title: {
-      text: 'Users'
-    }
+      text: 'Users',
+      style:{
+        color:"white"
+      }
+    },
+    labels:{
+      style:{
+        colors:"white",
+        
+      },
+},
   }]
 }
 const seriessclick=[{
@@ -220,19 +311,28 @@ const optionssclick={
   title: {
     text: 'Email click Categories',
     style:{
-      color:"gray",
+      color:"white",
     }
   },
   dataLabels: {
     enabled: true,
     enabledOnSeries: [1]
   },
+  legend: {
+    display: true,
+    position: "bottom",
+    labels: {
+    
+    colors:"white",
+    
+    }
+  },
   labels: ['01 Jan 2001', '02 Jan 2001', '03 Jan 2001', '04 Jan 2001', '05 Jan 2001', '06 Jan 2001', '07 Jan 2001', '08 Jan 2001', '09 Jan 2001', '10 Jan 2001', '11 Jan 2001', '12 Jan 2001'],
   xaxis: {
     type: 'datetime',
     labels:{
       style:{
-        colors:"gray",
+        colors:"white",
         
       },
 },
@@ -241,12 +341,12 @@ const optionssclick={
     title: {
       text: 'Email Click',
       style:{
-        color:"gray",
+        color:"white",
       },
     },
     labels:{
       style:{
-        colors:"gray",
+        colors:"white",
         
       },
 },
@@ -256,12 +356,12 @@ const optionssclick={
     title: {
       text: 'Email Unclick',
       style:{
-        color:"gray",
+        color:"white",
       },
     },
     labels:{
       style:{
-        colors:"gray",
+        colors:"white",
         
       },
 },
@@ -292,7 +392,7 @@ const optionss={
   title: {
     text: 'Undelivered Sources',
     style:{
-       color:"gray",
+       color:"white",
     },
   },
   dataLabels: {
@@ -300,19 +400,20 @@ const optionss={
     enabledOnSeries: [1]
   },
   labels: ['01 Jan 2001', '02 Jan 2001', '03 Jan 2001', '04 Jan 2001', '05 Jan 2001', '06 Jan 2001', '07 Jan 2001', '08 Jan 2001', '09 Jan 2001', '10 Jan 2001', '11 Jan 2001', '12 Jan 2001'],
-  legend:{
+  legend: {
+    display: true,
+    position: "bottom",
+    labels: {
     
+    colors:"white",
     
-    labels:{
-      color:"white",
-    },
-        
-  }, 
+    }
+  },
   xaxis: {
     type: 'datetime',
     labels:{
       style:{
-        colors:"gray",
+        colors:"white",
         
       },
 },
@@ -322,12 +423,12 @@ const optionss={
     title: {
       text: 'Spam Emails',
       style:{
-        color:"gray",
+        color:"white",
      },
     },
     labels:{
       style:{
-        colors:"gray",
+        colors:"white",
         
       },
 },
@@ -337,12 +438,12 @@ const optionss={
     title: {
       text: 'Wrong Emails',
       style:{
-        color:"gray",
+        color:"white",
      },
     },
     labels:{
       style:{
-        colors:"gray",
+        colors:"white",
         
       },
 },
@@ -382,11 +483,12 @@ const  series22= [{
       width: 2,
       colors: ['transparent']
     },
+    
     xaxis: {
       categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
        labels:{
       style:{
-        colors:"gray",
+        colors:"white",
         
       },
 },
@@ -395,12 +497,12 @@ const  series22= [{
       title: {
         text: 'Email Open & Unopen',
         style:{
-         color:"gray",
+         color:"white",
         }
       },
       labels:{
         style:{
-          colors:"gray",
+          colors:"white",
           
         },
   },
@@ -416,9 +518,14 @@ const  series22= [{
       }
     },
     legend: {
+      display: true,
+      position: "bottom",
+      labels: {
       
-      color:"white"
-    }
+      colors:"white",
+      
+      }
+    },
   }
 
 export default function Report1(){
@@ -434,20 +541,33 @@ export default function Report1(){
             <Row className="mt-4">
                 <Col  >
                   <Card className="p-3" style={{backgroundColor:"#002151"}}>
-                    <Row>
-                      <Col className="justify-content-center d-flex align-items-center">
-                      <img src={Recepient} height={70} width={70}/>
+                    <CardHeader style={{backgroundColor:"#002151"}}>
+                      <Row>
+                        <Col>
+                        <h2 className="text-white">Email Recepient Categories</h2>
+                        </Col>
+                      </Row>
+                      <Row>
+                        <Col>
+                        <h5 className="text-white">Total Email Recepient</h5>
+                        </Col>
+                      </Row>
+                    </CardHeader>
+                      
+                    <Row className="mt-2">
+                      <Col lg={4} className="justify-content-center d-flex align-items-center">
+                      <img src={Recepient} />
                       </Col>
-                      <Col   >
+                      <Col lg={8}>
                
                     <Row>
                         <Col className="">
-                        <h4 className="text-gray">Recepient</h4>
+                        <h4 className="text-white">Recepient</h4>
                         </Col>
                     </Row>
                     <Row>
                         <Col className="">
-                        <h2 className="text-gray">200</h2>
+                        <h2 className="text-white">200</h2>
                         </Col>
                     </Row>
              
@@ -455,32 +575,37 @@ export default function Report1(){
                       
                     </Row>
 
-                    <Row>
-                    <Col lg={12}  >
-                  
-                  <ReactApexChart options={optionsarea} series={seriesarea} type="area" height={130} />
-
-                 
-                      </Col>
-                    </Row>
+                    
                   </Card>
                   </Col>
                   <Col  >
                   <Card className="p-3"  style={{backgroundColor:"#002151"}}>
-                    <Row>
-                      <Col className="justify-content-center d-flex align-items-center">
-                      <img src={Delivery} height={70} width={70}/>
+                  <CardHeader style={{backgroundColor:"#002151"}}>
+                      <Row>
+                        <Col>
+                        <h2 className="text-white">Email Delivery Categories</h2>
+                        </Col>
+                      </Row>
+                      <Row>
+                        <Col>
+                        <h5 className="text-white">Total Email Delivery</h5>
+                        </Col>
+                      </Row>
+                    </CardHeader>
+                    <Row className="mt-2">
+                      <Col lg={4} className="justify-content-center d-flex align-items-center">
+                      <img src={Delivery} />
                       </Col>
-                      <Col   >
+                      <Col  lg={8} >
                
                     <Row>
                         <Col className="">
-                        <h4 className="text-gray">Email Delivery</h4>
+                        <h4 className="text-white">Email Delivery</h4>
                         </Col>
                     </Row>
                     <Row>
                         <Col className="">
-                        <h2 className="text-gray">100</h2>
+                        <h2 className="text-white">100</h2>
                         </Col>
                     </Row>
              
@@ -488,21 +613,14 @@ export default function Report1(){
                       
                     </Row>
 
-                    <Row>
-                    <Col lg={12}  >
-                  
-                  <ReactApexChart options={optionsarea} series={seriesarea} type="area" height={130} />
-
-                 
-                      </Col>
-                    </Row>
+                    
                   </Card>
                   </Col>
             </Row>
            
             <Row className="mt-3">
               <Col>
-              <Card  style={{backgroundColor:"#002151"}}>
+              <Card className="p-3" style={{backgroundColor:"#002151"}}>
               <ReactApexChart options={optionss} series={seriess} type="line" height={350} />
 
               </Card>
@@ -514,7 +632,7 @@ export default function Report1(){
               <Card className="p-3" style={{backgroundColor:"#002151"}}>
                 <Row>
                   <Col className="justify-content-center d-flex">
-                  <h3 className="text-gray">Total Delivered mail</h3></Col>
+                  <h3 className="text-white">Total Delivered mail</h3></Col>
                 </Row>
                 <Row>
                   <Col className="justify-content-center d-flex">
@@ -529,11 +647,11 @@ export default function Report1(){
               <Card className="p-3" style={{backgroundColor:"#002151"}}>
               <Row>
                   <Col className="justify-content-center d-flex">
-                  <h3 className="text-gray">Total Unsend mail</h3></Col>
+                  <h3 className="text-white">Total Unsend mail</h3></Col>
                 </Row>
                 <Row>
                   <Col className="justify-content-center d-flex">
-                  <ReactApexChart options={options11} series={series11} type="donut"  width={380} />
+                  <ReactApexChart options={optionsdount} series={seriesdount} type="donut"  width={380} />
                   </Col>
                 </Row>
 
@@ -554,12 +672,12 @@ export default function Report1(){
                
                     <Row>
                         <Col className="">
-                        <h4 className="text-gray">Email Open</h4>
+                        <h4 className="text-white">Email Open</h4>
                         </Col>
                     </Row>
                     <Row>
                         <Col className="">
-                        <h2 className="text-gray">80</h2>
+                        <h2 className="text-white">80</h2>
                         </Col>
                     </Row>
              
@@ -580,12 +698,12 @@ export default function Report1(){
                
                     <Row>
                         <Col className="">
-                        <h4 className="text-gray">Email Unopened</h4>
+                        <h4 className="text-white">Email Unopened</h4>
                         </Col>
                     </Row>
                     <Row>
                         <Col className="">
-                        <h2 className="text-gray">10</h2>
+                        <h2 className="text-white">10</h2>
                         </Col>
                     </Row>
              
@@ -625,12 +743,12 @@ export default function Report1(){
                 
                       <Row>
                           <Col className="">
-                          <h4 className="text-gray">Email clicked</h4>
+                          <h4 className="text-white">Email clicked</h4>
                           </Col>
                       </Row>
                       <Row>
                           <Col className="">
-                          <h2 className="text-gray">50</h2>
+                          <h2 className="text-white">50</h2>
                           </Col>
                       </Row>
               
@@ -651,12 +769,12 @@ export default function Report1(){
                 
                       <Row>
                           <Col className="">
-                          <h4 className="text-gray">Email UnClicked</h4>
+                          <h4 className="text-white">Email UnClicked</h4>
                           </Col>
                       </Row>
                       <Row>
                           <Col className="">
-                          <h2 className="text-gray">50</h2>
+                          <h2 className="text-white">50</h2>
                           </Col>
                       </Row>
               
@@ -691,10 +809,10 @@ export default function Report1(){
                     </Col>
                     <Col>
                     <Row>
-                      <h4 className="text-gray">Bounces</h4>
+                      <h4 className="text-white">Bounces</h4>
                     </Row>
                     <Row className="mt-2">
-                      <h1 className="text-gray">300</h1>
+                      <h1 className="text-white">300</h1>
                     </Row>
                     </Col>
                     
@@ -709,10 +827,10 @@ export default function Report1(){
                     </Col>
                     <Col>
                     <Row>
-                      <h4 className="text-gray">Average Users</h4>
+                      <h4 className="text-white">Average Users</h4>
                     </Row>
                     <Row className="mt-2">
-                      <h1 className="text-gray">790</h1>
+                      <h1 className="text-white">790</h1>
                     </Row>
                     </Col>
                     
@@ -727,10 +845,10 @@ export default function Report1(){
                     </Col>
                     <Col>
                     <Row>
-                      <h4 className="text-gray">Old Users</h4>
+                      <h4 className="text-white">Old Users</h4>
                     </Row>
                     <Row className="mt-2">
-                      <h1 className="text-gray">400</h1>
+                      <h1 className="text-white">400</h1>
                     </Row>
                     </Col>
                     
@@ -745,10 +863,10 @@ export default function Report1(){
                     </Col>
                     <Col>
                     <Row>
-                      <h4 className="text-gray">New Users</h4>
+                      <h4 className="text-white">New Users</h4>
                     </Row>
                     <Row className="mt-2">
-                      <h1 className="text-gray">100</h1>
+                      <h1 className="text-white">100</h1>
                     </Row>
                     </Col>
                     
@@ -765,17 +883,15 @@ export default function Report1(){
 
            <Row className="mt-3">
                 
-                <Col >
-                    <Card className="" style={{backgroundColor:'#002151'}}>
-                    
-                        <Col className="mb-5 mb-xl-0 p-1" xl="12" style={{}}>
-                            <Card className="" style={{boxShadow:"",backgroundColor:"#00072b",height:"400px",
+                
+                        <Col className="mb-5 mb-xl-0 " xl="12" style={{}}>
+                            <Card className="" style={{boxShadow:"",backgroundColor:"#002151",height:"400px",
                             /*backgroundImage:"linear-gradient(to right, #133D7A 0%, #3759B2 100%)",*/
                             border:"0px"
                             /*boxShadow:"10px 10px 15px #9b9b9b, -10px -10px 15px #ffffff"*/
                             /*boxShadow:"inset 2px 2px 5px #e7e7e7, inset -3px -3px 7px #bbbec3",backgroundColor:"#F8F8F8"*/}}>
                             <CardHeader className="border-0" 
-                            style={{ backgroundColor:"#00072b",/*backgroundImage:"linear-gradient(to right, #133D7A 0%, #3759B2 100%)",*/
+                            style={{ backgroundColor:"#002151",/*backgroundImage:"linear-gradient(to right, #133D7A 0%, #3759B2 100%)",*/
                             border:"0px"}}>
                                 <Row className="align-items-center">
                                 <div className="col">
@@ -820,22 +936,10 @@ export default function Report1(){
                         
                         
                     
-                    </Card>
-                </Col>
-                
+                    
            </Row>
 
-
-           
-                
-
-              
-
-
-
-               
-
-              
+          
            
         </div>
     );

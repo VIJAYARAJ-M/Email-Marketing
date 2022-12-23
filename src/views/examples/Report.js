@@ -126,12 +126,15 @@ const table = [{
 },
 
 ]
-const series11= [44, 55, 13, 43, 22]
+const seriesdount= [44, 55, 13, 43, 22]
 
-const options11= {
+const optionsdount= {
   chart: {
     width: 380,
-    type: 'pie',
+    type: 'dount',
+  },
+  stroke: {
+    width: 0
   },
   labels: ['Campign 1', 'Campign 2', 'Campign 3', 'Campign 4 ', 'Campign 5'],
   responsive: [{
@@ -140,6 +143,32 @@ const options11= {
       chart: {
         width: 200
       },
+      legend: {
+        position: 'bottom'
+      }
+    }
+  }]
+}
+
+const seriespie= [44, 55, 13, 43, 22]
+
+const optionspie= {
+  chart: {
+    width: 380,
+    type: 'pie',
+    
+  },
+  stroke: {
+    width: 0
+  },
+  labels: ['Campign 1', 'Campign 2', 'Campign 3', 'Campign 4 ', 'Campign 5'],
+  responsive: [{
+    breakpoint: 480,
+    options: {
+      chart: {
+        width: 200
+      },
+     
       legend: {
         position: 'bottom'
       }
@@ -576,7 +605,7 @@ export default function Report(){
                 </Row>
                 <Row>
                   <Col>
-                  <ReactApexChart options={options11} series={series11} type="pie"  width={380} />
+                  <ReactApexChart options={optionspie} series={seriespie} type="pie"  width={380} />
                   </Col>
                 </Row>
               
@@ -591,7 +620,7 @@ export default function Report(){
                 </Row>
                 <Row>
                   <Col>
-                  <ReactApexChart options={options11} series={series11} type="donut"  width={380} />
+                  <ReactApexChart options={optionsdount} series={seriesdount} type="donut"  width={380} />
                   </Col>
                 </Row>
 

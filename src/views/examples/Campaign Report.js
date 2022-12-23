@@ -133,6 +133,9 @@ const options11= {
     width: 380,
     type: 'pie',
   },
+  stroke: {
+    width: 0
+  },
   labels: ['Campign 1', 'Campign 2', 'Campign 3', 'Campign 4 ', 'Campign 5'],
   responsive: [{
     breakpoint: 480,
@@ -380,106 +383,179 @@ export default function CampaignReport(){
                   <h1 className="text-white" style={{color:""}}>Report</h1>
                 </Col>
             </Row>
-            <Row className="mt-3">
-                <Col>
-                <Card className="p-2 " style={{backgroundColor:'#002151'}}>
+          
+            <Row className="mt-4">
+                  <Col >
+                  <Card className="p-3">
                     <Row>
-                        <Col className="justify-content-center d-flex">
-                        <h5 className="text-white">Recipients</h5>
+                      <Col lg={4} className=" justify-content-center d-flex align-items-center">
+                       <img src={Recepient} height={70} width={70}/>
+                      </Col>
+                      <Col lg={8} >
+               
+                        <Row>
+                            <Col className="">
+                            <h4 className="text-black">Recipients</h4>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col className="">
+                            <h2 className="text-black">200</h2>
+                            </Col>
+                        </Row>
+             
+                      </Col>
+                    </Row>
+                  </Card>
+                  </Col>
+
+                  <Col >
+                  <Card className="p-3">
+                    <Row>
+                      <Col lg={4} className="justify-content-center d-flex align-items-center">
+                       <img src={Delivery} height={70} width={70}/>
+                      </Col>
+                      <Col lg={8}>
+               
+                    <Row>
+                        <Col className="">
+                        <h4 className="text-black">Email Delivered</h4>
                         </Col>
                     </Row>
                     <Row>
-                        <Col className="justify-content-center d-flex">
-                        <h2 className="text-white">200</h2>
+                        <Col className="">
+                        <h2 className="text-black">100</h2>
                         </Col>
                     </Row>
-                </Card>
-                </Col>
-                <Col>
-                <Card className="p-2" style={{backgroundColor:'#002151'}}>
-                    <Row>
-                        <Col className="justify-content-center d-flex">
-                        <h5 className="text-white">Email Delivered</h5>
-                        </Col>
+             
+                      </Col>
                     </Row>
+                  </Card>
+                  </Col>
+
+                  <Col >
+                  <Card className="p-3">
                     <Row>
-                        <Col className="justify-content-center d-flex">
-                        <h2 className="text-white">100</h2>
-                        </Col>
-                    </Row>
-                </Card>
-                </Col>
-                <Col>
-                <Card className="p-2" style={{backgroundColor:'#002151'}}>
+                      <Col lg={4} className="justify-content-center d-flex align-items-center">
+                       <img src={Open} height={70} width={70}/>
+                      </Col>
+                      <Col lg={8} >
+               
                     <Row>
-                        <Col className="justify-content-center d-flex">
-                        <h5 className="text-white">Email Opened</h5>
+                        <Col className="">
+                        <h4 className="text-black">Email Open</h4>
                         </Col>
                     </Row>
                     <Row>
-                        <Col className="justify-content-center d-flex">
-                        <h2 className="text-white">80</h2>
+                        <Col className="">
+                        <h2 className="text-black">80</h2>
                         </Col>
                     </Row>
-                </Card>
-                </Col>
-                <Col>
-                <Card className="p-2" style={{backgroundColor:'#002151'}}>
-                    <Row>
-                        <Col className="justify-content-center d-flex">
-                        <h5 className="text-white">Email Unopened</h5>
-                        </Col>
+             
+                      </Col>
                     </Row>
+                  </Card>
+                  </Col>
+                  <Col >
+                  <Card className="p-3">
                     <Row>
-                        <Col className="justify-content-center d-flex">
-                        <h2 className="text-white">10</h2>
-                        </Col>
-                    </Row>
-                </Card>
-                </Col>
-                <Col>
-                <Card className="p-2" style={{backgroundColor:'#002151'}}>
+                      <Col lg={4} className="justify-content-center d-flex align-items-center">
+                       <img src={Unopen} height={70} width={70}/>
+                      </Col>
+                      <Col lg={8} >
+               
                     <Row>
-                        <Col className="justify-content-center d-flex">
-                        <h5 className="text-white">Email Clicked</h5>
+                        <Col className="">
+                        <h4 className="text-black">Email Unopened</h4>
                         </Col>
                     </Row>
                     <Row>
-                        <Col className="justify-content-center d-flex">
-                        <h2 className="text-white">50</h2>
+                        <Col className="">
+                        <h2 className="text-black">10</h2>
                         </Col>
                     </Row>
-                </Card>
-                </Col>
-                <Col>
-                <Card className="p-2" style={{backgroundColor:'#002151'}}>
+             
+                      </Col>
+                    </Row>
+                  </Card>
+                  </Col>
+
+                 
+                </Row>
+
+                <Row className="mt-4">
+                <Col >
+                  <Card className="p-3">
                     <Row>
-                        <Col className="justify-content-center d-flex">
-                        <h5 className="text-white">Email Unclicked</h5>
+                      <Col lg={4} className="justify-content-center d-flex align-items-center">
+                       <img src={Click} height={70} width={70}/>
+                      </Col>
+                      <Col lg={8}>
+               
+                    <Row>
+                        <Col className="">
+                        <h4 className="text-black">Email clicked</h4>
                         </Col>
                     </Row>
                     <Row>
-                        <Col className="justify-content-center d-flex">
-                        <h2 className="text-white">50</h2>
+                        <Col className="">
+                        <h2 className="text-black">50</h2>
                         </Col>
                     </Row>
-                </Card>
-                </Col>
-                <Col>
-                <Card className="p-2" style={{backgroundColor:'#002151'}}>
+             
+                      </Col>
+                    </Row>
+                  </Card>
+                  </Col>
+
+                  <Col >
+                  <Card className="p-3">
                     <Row>
-                        <Col className="justify-content-center d-flex">
-                        <h5 className="text-white">Email Bounced</h5>
+                      <Col lg={4} className="justify-content-center d-flex align-items-center">
+                       <img src={Unclick} height={70} width={70}/>
+                      </Col>
+                      <Col lg={8}>
+               
+                    <Row>
+                        <Col className="">
+                        <h4 className="text-black">Email Unclicked</h4>
                         </Col>
                     </Row>
                     <Row>
-                        <Col className="justify-content-center d-flex">
-                        <h2 className="text-white">10</h2>
+                        <Col className="">
+                        <h2 className="text-black">50</h2>
                         </Col>
                     </Row>
-                </Card>
-                </Col>
-            </Row>
+             
+                      </Col>
+                    </Row>
+                  </Card>
+                  </Col>
+
+                  <Col >
+                  <Card className="p-3">
+                    <Row>
+                      <Col lg={4} className="justify-content-center d-flex align-items-center">
+                       <img src={Bounce} height={70} width={70}/>
+                      </Col>
+                      <Col lg={8}>
+               
+                    <Row>
+                        <Col className="">
+                        <h4 className="text-black">Email Bounced</h4>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col className="">
+                        <h2 className="text-black">10</h2>
+                        </Col>
+                    </Row>
+             
+                      </Col>
+                    </Row>
+                  </Card>
+                  </Col>
+                </Row>
 
             <Row className="mt-5">
                 <Col>

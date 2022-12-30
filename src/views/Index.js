@@ -45,6 +45,8 @@ import Bouncing from "./examples/Bouncing";
 import CampaignReport from "./examples/Campaign Report";
 import Report from "./examples/Report";
 import Report1 from "./examples/report1";
+import Call from "./examples/Call Campaign";
+import Pipline from "./examples/Pipeline";
 
 //import DateRangePicker from "../DatePicker/DateRange"
 
@@ -98,11 +100,11 @@ const Index = (props) => {
       <Container className="pb-8 pt-5 pt-md-8" fluid style={{backgroundColor:"#19335A"}}>
 
         
-        <Tabs defaultActiveKey="report" className="mt--4">
+        <Tabs defaultActiveKey="email" className="mt--4">
           <Tab eventKey="home" title="Home">
            <Home/>
           </Tab>
-          <Tab eventKey="pipeline" title="Marketing">
+          {/* <Tab eventKey="pipeline" title="Marketing">
            <Dashboard/>
           </Tab>
           <Tab eventKey="broadcast" title="Broadcast">
@@ -116,9 +118,15 @@ const Index = (props) => {
           </Tab>
           <Tab eventKey="report1" title="Report">
            <Report/>
-          </Tab>
-          <Tab eventKey="report2" title="Report1">
+          </Tab> */}
+          <Tab eventKey="email" title="Email Campaign">
            <Report1/>
+          </Tab>
+          <Tab eventKey="call" title="Call Campaign">
+           <Call/>
+          </Tab>
+          <Tab eventKey="pipeline" title="Pipeline">
+           <Pipline/>
           </Tab>
 
           

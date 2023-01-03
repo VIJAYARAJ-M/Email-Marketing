@@ -612,22 +612,18 @@ export default function Model2(){
 
     return(
         <div>
-            <Row className="mt-3">
-                <Col className="justify-content-center d-flex" >
-                  <h1 className="text-white" style={{color:""}}>Report</h1>
-                </Col>
-            </Row>
+           
 
            <Row className="mt-4">
-            <Col lg={4}>
+            <Col lg={3}>
               <Row>
               <Col >
                   <Card className="p-3" style={{backgroundColor:"#002151"}}>
                     <Row>
-                      <Col lg={4} className="justify-content-center d-flex align-items-center">
-                       <img src={Open} height={70} width={70}/>
+                      <Col lg={3} className="justify-content-center d-flex align-items-center">
+                       <img src={Open} height={50} width={50}/>
                       </Col>
-                      <Col lg={8} >
+                      <Col lg={9} >
                
                     <Row>
                         <Col className="">
@@ -650,10 +646,10 @@ export default function Model2(){
               <Col >
                   <Card className="p-3" style={{backgroundColor:"#002151"}}>
                     <Row>
-                      <Col lg={4} className="justify-content-center d-flex align-items-center">
-                       <img src={Unopen} height={70} width={70}/>
+                      <Col lg={3} className="justify-content-center d-flex align-items-center">
+                       <img src={Unopen} height={50} width={50}/>
                       </Col>
-                      <Col lg={8} >
+                      <Col lg={9} >
                
                     <Row>
                         <Col className="">
@@ -673,13 +669,13 @@ export default function Model2(){
               </Row>
 
             </Col>
-            <Col>
+            <Col lg={9}>
             <Row>
             <Col>
               <Card className="p-2" style={{backgroundColor:"#002151"}}>
               
 
-              <ReactApexChart options={option22} series={series22} type="bar" height={200} />
+              <ReactApexChart options={optionscolumn} series={seriescolumn} type="bar" height={200} />
 
     
 
@@ -690,15 +686,15 @@ export default function Model2(){
            </Row>
 
            <Row className="mt-4">
-              <Col lg={4}>
+              <Col lg={3}>
               <Row>
               <Col >
                     <Card className="p-3" style={{backgroundColor:"#002151"}}>
                       <Row>
-                        <Col lg={4} className="justify-content-center d-flex align-items-center">
-                        <img src={Click} height={70} width={70}/>
+                        <Col lg={3} className="justify-content-center d-flex align-items-center">
+                        <img src={Click} height={50} width={50}/>
                         </Col>
-                        <Col lg={8}>
+                        <Col lg={9}>
                 
                       <Row>
                           <Col className="">
@@ -721,10 +717,10 @@ export default function Model2(){
               <Col >
                     <Card className="p-3" style={{backgroundColor:"#002151"}}>
                       <Row>
-                        <Col lg={4} className="justify-content-center d-flex align-items-center">
-                        <img src={Unclick} height={70} width={70}/>
+                        <Col lg={3} className="justify-content-center d-flex align-items-center">
+                        <img src={Unclick} height={50} width={50}/>
                         </Col>
-                        <Col lg={8} >
+                        <Col lg={9} >
                 
                       <Row>
                           <Col className="">
@@ -743,7 +739,7 @@ export default function Model2(){
                     </Col>
               </Row>
               </Col>
-              <Col>
+              <Col lg={9}>
 
               <Row>
               <Col>
@@ -756,14 +752,7 @@ export default function Model2(){
               </Col>
            </Row>
 
-           <Row className="mt-2">
-            <Col>
-            <Card className="p-3" style={{backgroundColor:"#002151"}}>
-             <ReactApexChart options={optionscolumn} series={seriescolumn} type="bar" height={350} />
-            </Card>
-            </Col>
-           </Row>
-
+           
 
 
           

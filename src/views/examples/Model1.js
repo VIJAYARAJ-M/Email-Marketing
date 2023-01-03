@@ -136,6 +136,15 @@ const optionsdount= {
   stroke: {
     width: 0
   },
+  title: {
+    text: 'Total Unsent mail',
+   
+    align:"center",
+    style:{
+      color:"white",
+      fontSize:"12px",
+    }
+  },
   labels: ['Campign 1', 'Campign 2', 'Campign 3', 'Campign 4 ', 'Campign 5'],
   colors:["#6f42c1", "#007bff","#17a2b8", "#00cccc", "#adb2bd"],
   plotOptions: {
@@ -145,8 +154,10 @@ const optionsdount= {
       }
     }
   },
+  
   legend: {
     display: true,
+    fontSize:"10px",
     position: "bottom",
     labels: {
     
@@ -179,6 +190,15 @@ const options11= {
   stroke: {
     width: 0
   },
+  title: {
+    text: 'Total sent mail',
+   
+    align:"center",
+    style:{
+      color:"white",
+      fontSize:"12px",
+    }
+  },
   labels: ['Campign 1', 'Campign 2', 'Campign 3', 'Campign 4 ', 'Campign 5'],
   colors:["#6f42c1", "#007bff","#17a2b8", "#00cccc", "#adb2bd"],
   plotOptions: {
@@ -190,10 +210,12 @@ const options11= {
   },
   legend: {
     display: true,
+    fontSize:"10px",
     position: "bottom",
     labels: {
     
     colors:"white",
+    
     
     }
   },
@@ -520,9 +542,12 @@ const  series22= [{
     legend: {
       display: true,
       position: "bottom",
+     
       labels: {
       
       colors:"white",
+      fontSize:"5px",
+      
       
       }
     },
@@ -532,37 +557,23 @@ export default function model1(){
 
     return(
         <div>
-            <Row className="mt-3">
-                <Col className="justify-content-center d-flex" >
-                  <h1 className="text-white" style={{color:""}}>Report</h1>
-                </Col>
-            </Row>
+           
 
-            <Row className="mt-4">
-                <Col  >
+            
+           <Row className="mt-3">
+            <Col lg={3}>
+              <Row>
+              <Col >
                   <Card className="p-3" style={{backgroundColor:"#002151"}}>
-                    <CardHeader style={{backgroundColor:"#002151"}}>
-                      <Row>
-                        <Col>
-                        <h2 className="text-white">Email Recepient Categories</h2>
-                        </Col>
-                      </Row>
-                      <Row>
-                        <Col>
-                        <h5 className="text-white">Total Email Recepient</h5>
-                        </Col>
-                      </Row>
-                    </CardHeader>
-                      
-                    <Row className="mt-2">
+                    <Row>
                       <Col lg={4} className="justify-content-center d-flex align-items-center">
-                      <img src={Recepient} />
+                       <img src={Recepient} height={50} width={50}/>
                       </Col>
-                      <Col lg={8}>
+                      <Col lg={8} >
                
                     <Row>
                         <Col className="">
-                        <h4 className="text-white">Recepient</h4>
+                        <h4 className="text-white">Recepients</h4>
                         </Col>
                     </Row>
                     <Row>
@@ -572,31 +583,19 @@ export default function model1(){
                     </Row>
              
                       </Col>
-                      
                     </Row>
-
-                    
                   </Card>
                   </Col>
-                  <Col  >
-                  <Card className="p-3"  style={{backgroundColor:"#002151"}}>
-                  <CardHeader style={{backgroundColor:"#002151"}}>
-                      <Row>
-                        <Col>
-                        <h2 className="text-white">Email Delivery Categories</h2>
-                        </Col>
-                      </Row>
-                      <Row>
-                        <Col>
-                        <h5 className="text-white">Total Email Delivery</h5>
-                        </Col>
-                      </Row>
-                    </CardHeader>
-                    <Row className="mt-2">
+              </Row>
+
+              <Row className="mt-4">
+              <Col >
+                  <Card className="p-3" style={{backgroundColor:"#002151"}}>
+                    <Row>
                       <Col lg={4} className="justify-content-center d-flex align-items-center">
-                      <img src={Delivery} />
+                       <img src={Delivery} height={50} width={50}/>
                       </Col>
-                      <Col  lg={8} >
+                      <Col lg={8} >
                
                     <Row>
                         <Col className="">
@@ -610,62 +609,56 @@ export default function model1(){
                     </Row>
              
                       </Col>
-                      
                     </Row>
-
-                    
                   </Card>
                   </Col>
-            </Row>
-           
-            <Row className="mt-3">
-              <Col>
-              <Card className="p-3" style={{backgroundColor:"#002151"}}>
-              <ReactApexChart options={optionss} series={seriess} type="line" height={350} />
+              </Row>
+
+            </Col >
+            <Col lg={9}>
+            <Row>
+            <Col>
+              <Card className="p-1" style={{backgroundColor:"#002151"}}>
+              
+
+              <ReactApexChart options={optionss} series={seriess} type="line" height={200} />
+
+    
 
               </Card>
-              </Col>
+            </Col>
             </Row>
+            </Col>
+           </Row>
+           
             
             <Row className="mt-3">
-              <Col >
+              <Col lg={3} >
               <Card className="p-3" style={{backgroundColor:"#002151"}}>
+                
                 <Row>
                   <Col className="justify-content-center d-flex">
-                  <h3 className="text-white">Total Delivered mail</h3></Col>
-                </Row>
-                <Row>
-                  <Col className="justify-content-center d-flex">
-                  <ReactApexChart options={options11} series={series11} type="pie"  width={380} />
+                  <ReactApexChart options={options11} series={series11} type="pie"  width={280} />
                   </Col>
                 </Row>
               
 
               </Card>
               </Col>
-              <Col>
+              <Col lg={3}>
               <Card className="p-3" style={{backgroundColor:"#002151"}}>
-              <Row>
-                  <Col className="justify-content-center d-flex">
-                  <h3 className="text-white">Total Unsend mail</h3></Col>
-                </Row>
+              
                 <Row>
                   <Col className="justify-content-center d-flex">
-                  <ReactApexChart options={optionsdount} series={seriesdount} type="donut"  width={380} />
+                  <ReactApexChart options={optionsdount} series={seriesdount} type="donut"  width={280} />
                   </Col>
                 </Row>
 
               </Card>
               </Col>
-            </Row>
-
-           
-
-           <Row className="mt-3">
-                
-                
-                        <Col className="mb-5 mb-xl-0 " xl="12" style={{}}>
-                            <Card className="" style={{boxShadow:"",backgroundColor:"#002151",height:"400px",
+              <Col lg={6}>
+             
+                            <Card className="" style={{boxShadow:"",backgroundColor:"#002151",height:"240px",
                             /*backgroundImage:"linear-gradient(to right, #133D7A 0%, #3759B2 100%)",*/
                             border:"0px"
                             /*boxShadow:"10px 10px 15px #9b9b9b, -10px -10px 15px #ffffff"*/
@@ -675,7 +668,7 @@ export default function model1(){
                             border:"0px"}}>
                                 <Row className="align-items-center">
                                 <div className="col">
-                                    <h3 className="mb-0 text-white">Table</h3>
+                                    <h4 className="mb-0 text-white">Campaign Details</h4>
                                 </div>
                                 
                                 </Row>
@@ -686,7 +679,7 @@ export default function model1(){
                             <thead className="">
                             <tr className="" style={{color:"#FFB178"}}>
                                 <th scope="col">Date</th>
-                                <th scope="col">Campaign Name</th>
+                                <th scope="col">Subject Name</th>
                                 <th scope="col">User</th>
                                 <th scope="col">New User</th>
                                 <th scope="col">Bounce Rate</th>
@@ -712,12 +705,11 @@ export default function model1(){
                             ))}
                         </Table>
                             </Card>
-                        </Col>
                         
-                        
-                    
-                    
-           </Row>
+              </Col>
+            </Row>
+
+           
 
           
            

@@ -249,7 +249,7 @@ export default function Pipline(){
         <div>
             
 
-            <Row className="mt-5">
+            <Row className="mt-2">
                 <Col>
                 <Card className="p-3"  style={{backgroundColor:"#002151"}}>
                     <Row>

@@ -15,6 +15,14 @@ const optionsdount= {
     width: 380,
     type: 'pie',
   },
+  title: {
+    text: 'Call Status',
+   
+    style:{
+      color:"white",
+      
+    }
+  },
   stroke: {
     width: 0
   },
@@ -134,9 +142,9 @@ export default function Call(){
         <div>
             
 
-            <Row className="mt-5">
+            <Row className="mt-3">
                 <Col>
-                    <Card className="p-3" style={{backgroundColor:"#002151"}}>
+                    <Card className="p-2" style={{backgroundColor:"#002151"}}>
                         <Row>
                             <Col>
                             <Row>
@@ -151,13 +159,13 @@ export default function Call(){
                             </Row>
                             </Col>
                             <Col className="d-flex justify-content-center">
-                             <img src={Total} height={60} width={60}/>
+                             <img src={Total} height={50} width={50}/>
                             </Col>
                         </Row>
                     </Card>
                 </Col>
                 <Col>
-                    <Card className="p-3" style={{backgroundColor:"#002151"}}>
+                    <Card className="p-2" style={{backgroundColor:"#002151"}}>
                         <Row>
                             <Col lg={8}>
                             <Row>
@@ -172,13 +180,13 @@ export default function Call(){
                             </Row>
                             </Col>
                             <Col lg={4} className="d-flex justify-content-center">
-                             <img src={Answer} height={60} width={60}/>
+                             <img src={Answer} height={50} width={50}/>
                             </Col>
                         </Row>
                     </Card>
                 </Col>
                 <Col>
-                    <Card className="p-3" style={{backgroundColor:"#002151"}}>
+                    <Card className="p-2" style={{backgroundColor:"#002151"}}>
                         <Row>
                             <Col lg={8}>
                             <Row>
@@ -193,13 +201,13 @@ export default function Call(){
                             </Row>
                             </Col>
                             <Col lg={4} className="d-flex justify-content-center">
-                             <img src={Missed} height={60} width={60}/>
+                             <img src={Missed} height={50} width={50}/>
                             </Col>
                         </Row>
                     </Card>
                 </Col>
                 <Col>
-                    <Card className="p-3" style={{backgroundColor:"#002151"}}>
+                    <Card className="p-2" style={{backgroundColor:"#002151"}}>
                         <Row>
                             <Col lg={8}>
                             <Row>
@@ -214,7 +222,7 @@ export default function Call(){
                             </Row>
                             </Col>
                             <Col lg={4} className="d-flex justify-content-center">
-                             <img src={Abended} height={60} width={60}/>
+                             <img src={Abended} height={50} width={50}/>
                             </Col>
                         </Row>
                     </Card>

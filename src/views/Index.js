@@ -105,7 +105,7 @@ const Index = (props) => {
       <Container className="pb-8 pt-5 pt-md-8" fluid style={{backgroundColor:"#19335A"}}>
 
         
-        <Tabs defaultActiveKey="email" className="mt--4">
+        <Tabs defaultActiveKey="model1" className="mt--4">
           <Tab eventKey="home" title="Home">
            <Home/>
           </Tab>
@@ -124,8 +124,17 @@ const Index = (props) => {
           <Tab eventKey="report1" title="Report">
            <Report/>
           </Tab> */}
-          <Tab eventKey="email" title="Email Campaign">
+          {/* <Tab eventKey="email" title="Email Campaign">
            <Report1/>
+          </Tab> */}
+          <Tab eventKey="model1" title="Email Campaign 1">
+          <Model1/>
+          </Tab>
+          <Tab eventKey="model2" title="Email Campaign 2">
+          <Model2/>
+          </Tab>
+          <Tab eventKey="model3" title="Email Campaign 3">
+          <Model3/>
           </Tab>
           <Tab eventKey="call" title="Call Campaign">
            <Call/>
@@ -136,18 +145,10 @@ const Index = (props) => {
           <Tab eventKey="social" title="Social Media Campaign">
           <Social/>
           </Tab>
-          <Tab eventKey="email1" title="Email">
+          {/* <Tab eventKey="email1" title="Email">
           <Email/>
-          </Tab>
-          <Tab eventKey="model1" title="Report1">
-          <Model1/>
-          </Tab>
-          <Tab eventKey="model2" title="Report2">
-          <Model2/>
-          </Tab>
-          <Tab eventKey="model3" title="Report3">
-          <Model3/>
-          </Tab>
+          </Tab> */}
+          
 
 
           

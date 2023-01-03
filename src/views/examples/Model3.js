@@ -544,24 +544,14 @@ export default function Model3(){
 
     return(
         <div>
-            <Row className="mt-3">
-                <Col className="justify-content-center d-flex" >
-                  <h1 className="text-white" style={{color:""}}>Report</h1>
-                </Col>
-            </Row>
 
-           
-           
-           
-
-
-            <Row className="mt-4">
-                <Col lg={4}>
+            <Row className="mt-2">
+                <Col lg={3}>
                   <Card className="p-3" style={{backgroundColor:"#002151"}}>
                   <Row className="mt-2">
                   
                     <Col>
-                    <img src={Bounce} height={70} width={70}/>
+                    <img src={Bounce} height={50} width={50}/>
                     </Col>
                     <Col>
                     <Row>
@@ -579,7 +569,7 @@ export default function Model3(){
                   <Row >
                   
                     <Col>
-                    <img src={Average} height={70} width={70}/>
+                    <img src={Average} height={50} width={50}/>
                     </Col>
                     <Col>
                     <Row>
@@ -597,7 +587,7 @@ export default function Model3(){
                   <Row >
                   
                     <Col>
-                    <img src={Old} height={70} width={70}/>
+                    <img src={Old} height={50} width={50}/>
                     </Col>
                     <Col>
                     <Row>
@@ -615,7 +605,7 @@ export default function Model3(){
                   <Row >
                   
                     <Col>
-                    <img src={New} height={70} width={70}/>
+                    <img src={New} height={50} width={50}/>
                     </Col>
                     <Col>
                     <Row>
@@ -630,25 +620,31 @@ export default function Model3(){
                   
                   </Card>
                 </Col>
-                <Col lg={8}>
-                <Card className="p-3" style={{backgroundColor:"#002151"}}>
-                <ReactApexChart options={options111} series={series111} type="line" height={490} />
-                </Card>
+                <Col lg={9}>
+                
+                <Row>
+                  <Col>
+                    <Card className="p-3" style={{backgroundColor:"#002151"}}>
+                     <ReactApexChart options={options111} series={series111} type="line" height={220} />
+                    </Card>
+                  </Col>
+                </Row>
+                <Row className="mt-2">
+                  <Col lg={6} className=" ">
+                  <Card className="p-3 d-flex justify-content-center align-items-center" style={{backgroundColor:"#002151"}}>
+                    <ReactApexChart options={options11} series={series11} type="pie"  width={300} />
+                  </Card>
+                  </Col>
+                  <Col lg={6} >
+                  <Card className="p-3 d-flex justify-content-center align-items-center" style={{backgroundColor:"#002151"}}>
+                    <ReactApexChart options={optionsdount} series={seriesdount} type="donut"  width={300} />
+                  </Card>
+                  </Col>
+                </Row>
                 </Col>
             </Row>
 
-            <Row className="mt-2">
-              <Col>
-              <Card className="p-3" style={{backgroundColor:"#002151"}}>
-                <ReactApexChart options={options11} series={series11} type="pie"  width={380} />
-              </Card>
-              </Col>
-              <Col>
-              <Card className="p-3" style={{backgroundColor:"#002151"}}>
-                <ReactApexChart options={optionsdount} series={seriesdount} type="donut"  width={380} />
-              </Card>
-              </Col>
-            </Row>
+           
 
           
           

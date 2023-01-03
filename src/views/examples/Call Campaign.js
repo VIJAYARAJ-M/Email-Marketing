@@ -159,7 +159,7 @@ export default function Call(){
                             </Row>
                             <Row>
                                 <Col className="d-flex justify-content-start">
-                                <h1 className="text-white">510</h1>
+                                <h1 className="text-white">80%</h1>
                                 </Col>
                             </Row>
                             </Col>
@@ -248,7 +248,7 @@ export default function Call(){
                                 </Row>
                                 <Row>
                                     <Col className="d-flex justify-content-start">
-                                    <h1 className="text-white">510</h1>
+                                    <h1 className="text-white">20%</h1>
                                     </Col>
                                 </Row>
                                 </Col>
@@ -271,7 +271,7 @@ export default function Call(){
                                 </Row>
                                 <Row>
                                     <Col className="d-flex justify-content-start">
-                                    <h1 className="text-white">510</h1>
+                                    <h1 className="text-white">18%</h1>
                                     </Col>
                                 </Row>
                                 </Col>
@@ -294,7 +294,7 @@ export default function Call(){
                                 </Row>
                                 <Row>
                                     <Col className="d-flex justify-content-start">
-                                    <h1 className="text-white">510</h1>
+                                    <h1 className="text-white">30%</h1>
                                     </Col>
                                 </Row>
                                 </Col>

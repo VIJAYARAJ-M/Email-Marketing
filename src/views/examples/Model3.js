@@ -594,7 +594,7 @@ export default function Model3(){
                       <h4 className="text-white">List growth rate(%)</h4>
                     </Row>
                     <Row className="mt-2">
-                      <h1 className="text-white">400</h1>
+                      <h1 className="text-white">40%</h1>
                     </Row>
                     </Col>
                     
@@ -612,7 +612,7 @@ export default function Model3(){
                       <h4 className="text-white">Autoreply rate(%)</h4>
                     </Row>
                     <Row className="mt-2">
-                      <h1 className="text-white">100</h1>
+                      <h1 className="text-white">10%</h1>
                     </Row>
                     </Col>
                     

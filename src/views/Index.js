@@ -47,6 +47,11 @@ import Report from "./examples/Report";
 import Report1 from "./examples/report1";
 import Call from "./examples/Call Campaign";
 import Pipline from "./examples/Pipeline";
+import Social from "./examples/Social";
+import Email from "./examples/Email";
+import Model1 from "./examples/Model1";
+import Model2 from "./examples/Model2";
+import Model3 from "./examples/Model3";
 
 //import DateRangePicker from "../DatePicker/DateRange"
 
@@ -128,6 +133,22 @@ const Index = (props) => {
           <Tab eventKey="pipeline" title="Pipeline">
            <Pipline/>
           </Tab>
+          <Tab eventKey="social" title="Social Media Campaign">
+          <Social/>
+          </Tab>
+          <Tab eventKey="email1" title="Email">
+          <Email/>
+          </Tab>
+          <Tab eventKey="model1" title="Report1">
+          <Model1/>
+          </Tab>
+          <Tab eventKey="model2" title="Report2">
+          <Model2/>
+          </Tab>
+          <Tab eventKey="model3" title="Report3">
+          <Model3/>
+          </Tab>
+
 
           
         </Tabs>

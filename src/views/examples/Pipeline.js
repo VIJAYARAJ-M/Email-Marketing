@@ -1,8 +1,8 @@
 import React from "react"
-import { Card, Col, Row } from "reactstrap";
+import { Card, Col, Row, Table, CardHeader } from "reactstrap";
 import Money from "../../assets/img/brand/money.png"
 import Closed from "../../assets/img/brand/closed.png"
-import Count from "../../assets/img/brand/Count.png"
+import Count from "../../assets/img/brand/Counts.png"
 import Days from "../../assets/img/brand/days.png"
 import ReactApexChart from "react-apexcharts";
 
@@ -25,9 +25,9 @@ const options= {
       }
     },
     title: {
-        text: 'Leads by source',
+        text: 'Leads by sources',
         style:{
-           color:"black",
+           color:"white",
            
         },
         
@@ -49,12 +49,12 @@ const options= {
       title: {
         text: 'Record Count',
         style:{
-          color:"black",
+          color:"white",
        },
       },
       labels:{
         style:{
-          colors:"black",
+          colors:"white",
           
         },
   },
@@ -65,27 +65,191 @@ const options= {
         ['advertisements'],
         ['Emplyee Referral'],
         ['External Referral'],
-        'Amber',
-        ['Peter', 'Brown'],
-        ['Mary', 'Evans'],
-        ['David', 'Wilson'],
-        ['Lily', 'Roberts'], 
+        ['Facebook'],
+        ['omline store'],
+        ['Partner'],
+        ['LinkedIn'],
+        ['Monster'], 
       ],
       labels: {
         style: {
         //   colors: colors,
-          fontSize: '12px'
+          fontSize: '12px',
+          colors:'white'
         }
       }
     }
   }
 
+const optionspie= {
+  chart: {
+    width: 380,
+    type: 'pie',
+  },
+  title: {
+    text: 'Account by industry',
+    style:{
+      color:"white",
+    }
+  },
+  stroke: {
+    width: 0
+  },
+  labels: ['Technology', 'Consultant', 'Communication', 'Education', 'Manufacturing'],
+  colors:["#6f42c1", "#007bff","#17a2b8", "#00cccc", "#adb2bd"],
+  plotOptions: {
+    pie: {
+      donut: {
+        size: '65%'
+      }
+    }
+  },
+  legend: {
+    display: true,
+    position: "bottom",
+    labels: {
+    
+    colors:"white",
+    
+    }
+  },
+  responsive: [{
+    breakpoint: 480,
+    options: {
+      chart: {
+        width: 200
+      },
+      legend: {
+        position: 'bottom'
+      }
+    }
+  }]
+}
+const seriespie= [44, 55, 13, 43, 22]
+
+const seriesbar= [{
+  name: 'Net Profit',
+  data: [44, 55, 57, 56, 61, 58]
+}]
+
+const optionsbar= {
+  chart: {
+    type: 'bar',
+    height: 350,
+    toolbar:{
+      show:!1,
+        }
+  },
+  title: {
+    text: 'Leads by Status',
+    style:{
+      color:"white",
+    }
+  },
+  plotOptions: {
+    bar: {
+      horizontal: false,
+      columnWidth: '55%',
+      endingShape: 'rounded'
+    },
+  },
+  dataLabels: {
+    enabled: false
+  },
+  stroke: {
+    show: true,
+    width: 2,
+    colors: ['transparent']
+  },
+  xaxis: {
+    categories: ['Attempted to contact', 'Contact in future', 'Contacted', 'Lost Lead', 'Not contact', 'Pre-Qualifying'],
+    labels:{
+      style:{
+        colors:"white",
+        
+      },
+},
+  },
+  yaxis: {
+    title: {
+      text: 'Record Count',
+      style:{
+        color:"white",
+      },
+      
+    },
+    labels:{
+      style:{
+        colors:"white",
+        
+      },
+},
+  },
+  fill: {
+    opacity: 1
+  },
+  tooltip: {
+    y: {
+      formatter: function (val) {
+        return "$ " + val + " thousands"
+      }
+    }
+  }
+}
+
+
+const table1 = [{
+  name :"Orien",
+  amount:"$35,000",
+  stage:"Closed Win",
+  date:"20-12-2022",
+ 
+  
+},
+{
+  name :"Orien",
+  amount:"$35,000",
+  stage:"Closed Win",
+  date:"20-12-2022",
+},
+{
+  name :"Orien",
+  amount:"$35,000",
+  stage:"Closed Win",
+  date:"20-12-2022",
+},
+{
+  name :"Orien",
+  amount:"$35,000",
+  stage:"Closed Win",
+  date:"20-12-2022",
+},
+{
+  name :"Orien",
+  amount:"$35,000",
+  stage:"Closed Win",
+  date:"20-12-2022",
+},
+{
+  name :"Orien",
+  amount:"$35,000",
+  stage:"Closed Win",
+  date:"20-12-2022",
+},
+{
+  name :"Orien",
+  amount:"$35,000",
+  stage:"Closed Win",
+  date:"20-12-2022",
+},
+]
+
 export default function Pipline(){
     return(
         <div>
-            <h2 className="text-white">Pipeline</h2>
+            
 
-            <Row>
+            <Row className="mt-5">
                 <Col>
                 <Card className="p-3"  style={{backgroundColor:"#002151"}}>
                     <Row>
@@ -182,11 +346,89 @@ export default function Pipline(){
 
             <Row className="mt-2">
                 <Col>
-                <Card className="p-3">
-                <ReactApexChart options={options} series={series} type="bar" height={350} />
+                <Card className="p-3" style={{backgroundColor:"#002151"}}>
+                  <Row>
+                    <Col>
+                    <ReactApexChart options={options} series={series} type="bar" height={273} />
+                    </Col>
+                  </Row>
+               
                 </Card>
                 </Col>
+                <Col >
+                <Card className="p-3"  style={{backgroundColor:"#002151"}}>
+                  <Row>
+                    <Col className="d-flex justify-content-center" >
+                     <ReactApexChart options={optionspie} series={seriespie} type="pie"  width={380} />
+                    </Col>
+                  </Row>
+                 
+                </Card>
+                </Col>
+                
             </Row>
+
+            <Row className="mt-3">
+              <Col lg={5}>
+                <Card className="p-3" style={{backgroundColor:"#002151"}}>
+                <ReactApexChart options={optionsbar} series={seriesbar} type="bar" height={350} />
+                </Card>
+              </Col>
+              <Col lg={7}>
+              <Card className="" style={{backgroundColor:'#002151' ,height:"400px"}}>
+                    
+                   
+                        
+                        <CardHeader className="" 
+                        style={{ backgroundColor:"#002151",/*backgroundImage:"linear-gradient(to right, #133D7A 0%, #3759B2 100%)",*/
+                        border:"0px"}}>
+                            <Row className="align-items-center">
+                            <div className="col">
+                                <h3 className="mb-0 text-white">Deal Details</h3>
+                            </div>
+                            
+                            </Row>
+                        
+                        
+                        </CardHeader>
+                        <Table className="align-items-center  table-flush" responsive >
+                        <thead >
+                        <tr className="" style={{color:"#91cf57", backgroundColor:"#26385c"}}>
+                            <th scope="col">Name</th>
+                            <th className=" " scope="col">Amount</th>
+                            <th scope="col">Stage</th>
+                            <th scope="col">Closing Date</th>
+                            
+                        </tr>
+                        </thead>
+                        {table1.map((item, index)=>(
+                        <tbody   >
+                        <tr key={index} className="text-white  " >
+                            <td className=""  scope="">{item.name}</td>
+                            <td >{item.amount}</td>
+                            <td className="">{item.stage}</td>
+                            <td >{item.date}</td>
+                            
+                            
+                        
+                        </tr>
+                    
+                    
+                    
+                        
+                        </tbody>
+                        ))}
+                    </Table>
+                       
+                 
+                     
+                    
+               
+                </Card>
+              </Col>
+            </Row>
+
+            
         </div>
     );
 }

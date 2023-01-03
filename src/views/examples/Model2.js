@@ -528,6 +528,86 @@ const  series22= [{
     },
   }
 
+  const seriescolumn= [{
+    name: 'Call',
+    data: [44, 55, 41, 67, 22, 43, 21, 49]
+  }, {
+    name: 'Form',
+    data: [13, 23, 20, 8, 13, 27, 33, 12]
+  }]
+
+ const optionscolumn= {
+    chart: {
+      type: 'bar',
+      height: 350,
+      stacked: true,
+      stackType: '100%',
+      toolbar:{
+        show:!1,
+      }
+    },
+    title: {
+      text: 'Average conversion, call and form rate for Email',
+      style:{
+        color:"white",
+       
+      }
+    },
+    responsive: [{
+      breakpoint: 480,
+      options: {
+        legend: {
+          position: 'bottom',
+          offsetX: -10,
+          offsetY: 0
+        }
+      }
+    }],
+    
+    xaxis: {
+      categories: ['Jan', 'Feb', 'Mar', 'App', 'May', 'Jun',
+        'Jul', 'Aug'
+      ],
+      style:{
+        color:"white",
+      },labels:{
+        style:{
+          colors:"white",
+          
+        },
+  },
+    },
+    yaxis: {
+        title: {
+          text: 'Count',
+          style:{
+            color:"white",
+          },
+          
+        },
+        labels:{
+          style:{
+            colors:"white",
+            
+          },
+    },
+      },
+     
+    
+    fill: {
+      opacity: 1
+    },
+    legend: {
+      position: 'right',
+      offsetX: 0,
+      offsetY: 50,
+      labels: {
+    
+        colors:"white",
+        
+        }
+    },
+  }
 export default function Model2(){
 
     return(
@@ -538,11 +618,6 @@ export default function Model2(){
                 </Col>
             </Row>
 
-           
-           
-           
-            
-           
            <Row className="mt-4">
             <Col lg={4}>
               <Row>
@@ -556,12 +631,12 @@ export default function Model2(){
                
                     <Row>
                         <Col className="">
-                        <h4 className="text-white">Email Open</h4>
+                        <h4 className="text-white">Open Rate(%)</h4>
                         </Col>
                     </Row>
                     <Row>
                         <Col className="">
-                        <h2 className="text-white">80</h2>
+                        <h2 className="text-white">80%</h2>
                         </Col>
                     </Row>
              
@@ -582,12 +657,12 @@ export default function Model2(){
                
                     <Row>
                         <Col className="">
-                        <h4 className="text-white">Email Unopened</h4>
+                        <h4 className="text-white">Unopened Rate(%)</h4>
                         </Col>
                     </Row>
                     <Row>
                         <Col className="">
-                        <h2 className="text-white">10</h2>
+                        <h2 className="text-white">10%</h2>
                         </Col>
                     </Row>
              
@@ -679,6 +754,14 @@ export default function Model2(){
                 </Col>
               </Row>
               </Col>
+           </Row>
+
+           <Row className="mt-2">
+            <Col>
+            <Card className="p-3" style={{backgroundColor:"#002151"}}>
+             <ReactApexChart options={optionscolumn} series={seriescolumn} type="bar" height={350} />
+            </Card>
+            </Col>
            </Row>
 
 

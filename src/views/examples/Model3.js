@@ -126,7 +126,7 @@ const table = [{
 },
 
 ]
-const seriesdount= [44, 55, 13, 43, 22]
+const seriesdount= [44, 5]
 
 const optionsdount= {
   chart: {
@@ -136,8 +136,14 @@ const optionsdount= {
   stroke: {
     width: 0
   },
-  labels: ['Campign 1', 'Campign 2', 'Campign 3', 'Campign 4 ', 'Campign 5'],
-  colors:["#6f42c1", "#007bff","#17a2b8", "#00cccc", "#adb2bd"],
+  title: {
+    text: 'Opened Vs Unsubscribed',
+    style:{
+      color:"white",
+    }
+  },
+  labels: ['Opened', 'Unsubscribed'],
+  colors:["#00cccc", "#007bff"],
   plotOptions: {
     pie: {
       donut: {
@@ -167,7 +173,7 @@ const optionsdount= {
   }]
 }
 
-const series11= [44, 55, 13, 43, 22]
+const series11= [44, 5]
 
 
 
@@ -176,11 +182,17 @@ const options11= {
     width: 380,
     type: 'pie',
   },
+  title: {
+    text: 'Delivered Vs Unsubscribed',
+    style:{
+      color:"white",
+    }
+  },
   stroke: {
     width: 0
   },
-  labels: ['Campign 1', 'Campign 2', 'Campign 3', 'Campign 4 ', 'Campign 5'],
-  colors:["#6f42c1", "#007bff","#17a2b8", "#00cccc", "#adb2bd"],
+  labels: ['Delivered', 'Unsubscribed'],
+  colors:["#6f42c1", "#00cccc",],
   plotOptions: {
     pie: {
       donut: {
@@ -623,6 +635,19 @@ export default function Model3(){
                 <ReactApexChart options={options111} series={series111} type="line" height={490} />
                 </Card>
                 </Col>
+            </Row>
+
+            <Row className="mt-2">
+              <Col>
+              <Card className="p-3" style={{backgroundColor:"#002151"}}>
+                <ReactApexChart options={options11} series={series11} type="pie"  width={380} />
+              </Card>
+              </Col>
+              <Col>
+              <Card className="p-3" style={{backgroundColor:"#002151"}}>
+                <ReactApexChart options={optionsdount} series={seriesdount} type="donut"  width={380} />
+              </Card>
+              </Col>
             </Row>
 
           

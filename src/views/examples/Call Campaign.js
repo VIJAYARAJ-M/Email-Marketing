@@ -4,6 +4,9 @@ import Total from "../../assets/img/brand/Total call.png"
 import Answer from "../../assets/img/brand/Answer1.png"
 import Missed from "../../assets/img/brand/Missed1.png"
 import Abended from "../../assets/img/brand/Abended.png"
+import Duration from "../../assets/img/brand/Duration.png"
+import Routing from "../../assets/img/brand/Routing.png"
+import Center from "../../assets/img/brand/center.png"
 
 import ReactApexChart from "react-apexcharts"
 
@@ -17,6 +20,7 @@ const optionsdount= {
   },
   title: {
     text: 'Call Status',
+    align:"center",
    
     style:{
       color:"white",
@@ -143,23 +147,24 @@ export default function Call(){
             
 
             <Row className="mt-3">
+              
                 <Col>
                     <Card className="p-2" style={{backgroundColor:"#002151"}}>
                         <Row>
-                            <Col>
+                            <Col lg={7}>
                             <Row>
-                                <Col className="d-flex justify-content-center">
-                                <h4 className="text-white">Total Calls</h4>
+                                <Col className="d-flex justify-content-start">
+                                <h5 className="text-white">Calls Volume Rate(%)</h5>
                                 </Col>
                             </Row>
                             <Row>
-                                <Col className="d-flex justify-content-center">
+                                <Col className="d-flex justify-content-start">
                                 <h1 className="text-white">510</h1>
                                 </Col>
                             </Row>
                             </Col>
-                            <Col className="d-flex justify-content-center">
-                             <img src={Total} height={50} width={50}/>
+                            <Col lg={5} className="d-flex justify-content-start">
+                             <img src={Total} height={40} width={40}/>
                             </Col>
                         </Row>
                     </Card>
@@ -169,18 +174,18 @@ export default function Call(){
                         <Row>
                             <Col lg={8}>
                             <Row>
-                                <Col className="d-flex justify-content-center">
-                                <h4 className="text-white">Answered Calls</h4>
+                                <Col className="d-flex justify-content-start">
+                                <h5 className="text-white">Answered Calls Rate(%)</h5>
                                 </Col>
                             </Row>
                             <Row>
-                                <Col className="d-flex justify-content-center">
+                                <Col className="d-flex justify-content-start">
                                 <h1 className="text-white">400</h1>
                                 </Col>
                             </Row>
                             </Col>
-                            <Col lg={4} className="d-flex justify-content-center">
-                             <img src={Answer} height={50} width={50}/>
+                            <Col lg={4} className="d-flex justify-content-start">
+                             <img src={Answer} height={40} width={40}/>
                             </Col>
                         </Row>
                     </Card>
@@ -188,20 +193,20 @@ export default function Call(){
                 <Col>
                     <Card className="p-2" style={{backgroundColor:"#002151"}}>
                         <Row>
-                            <Col lg={8}>
+                            <Col lg={7}>
                             <Row>
-                                <Col className="d-flex justify-content-center">
-                                <h4 className="text-white">Missed Calls</h4>
+                                <Col className="d-flex justify-content-start">
+                                <h5 className="text-white">Missed Calls Rate(%)</h5>
                                 </Col>
                             </Row>
                             <Row>
-                                <Col className="d-flex justify-content-center">
+                                <Col className="d-flex justify-content-start">
                                 <h1 className="text-white">100</h1>
                                 </Col>
                             </Row>
                             </Col>
-                            <Col lg={4} className="d-flex justify-content-center">
-                             <img src={Missed} height={50} width={50}/>
+                            <Col lg={5} className="d-flex justify-content-start">
+                             <img src={Missed} height={40} width={40}/>
                             </Col>
                         </Row>
                     </Card>
@@ -211,37 +216,115 @@ export default function Call(){
                         <Row>
                             <Col lg={8}>
                             <Row>
-                                <Col className="d-flex justify-content-center">
-                                <h4 className="text-white"> Abandoned Calls</h4>
+                                <Col className="d-flex justify-content-start">
+                                <h5 className="text-white"> Abandoned Calls Rate(%)</h5>
                                 </Col>
                             </Row>
                             <Row>
-                                <Col className="d-flex justify-content-center">
+                                <Col className="d-flex justify-content-start">
                                 <h1 className="text-white">10</h1>
                                 </Col>
                             </Row>
                             </Col>
-                            <Col lg={4} className="d-flex justify-content-center">
-                             <img src={Abended} height={50} width={50}/>
+                            <Col lg={4} className="d-flex justify-content-start">
+                             <img src={Abended} height={40} width={40}/>
                             </Col>
                         </Row>
                     </Card>
                 </Col>
             </Row>
 
-            <Row className="mt-3">
-                <Col>
+            <Row className="mt-2">
+                <Col lg={3}>
+                  <Row className="">
+                    <Col>
+                    <Card className="p-2" style={{backgroundColor:"#002151"}}>
+                            <Row>
+                                <Col lg={7}>
+                                <Row>
+                                    <Col className="d-flex justify-content-start">
+                                    <h5 className="text-white">Calls Duration Rate(%)</h5>
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <Col className="d-flex justify-content-start">
+                                    <h1 className="text-white">510</h1>
+                                    </Col>
+                                </Row>
+                                </Col>
+                                <Col lg={5} className="d-flex justify-content-start">
+                                <img src={Duration} height={50} width={50}/>
+                                </Col>
+                            </Row>
+                        </Card>
+                    </Col>
+                  </Row>
+                  <Row className="mt-1">
+                    <Col>
+                    <Card className="p-2" style={{backgroundColor:"#002151"}}>
+                            <Row>
+                                <Col lg={7}>
+                                <Row>
+                                    <Col className="d-flex justify-content-start">
+                                    <h5 className="text-white">Calls routing data Rate(%)</h5>
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <Col className="d-flex justify-content-start">
+                                    <h1 className="text-white">510</h1>
+                                    </Col>
+                                </Row>
+                                </Col>
+                                <Col lg={5} className="d-flex justify-content-start">
+                                <img src={Routing} height={50} width={50}/>
+                                </Col>
+                            </Row>
+                        </Card>
+                    </Col>
+                  </Row>
+                  <Row className="mt-1">
+                    <Col>
+                    <Card className="p-2" style={{backgroundColor:"#002151"}}>
+                            <Row>
+                                <Col lg={7}>
+                                <Row>
+                                    <Col className="d-flex justify-content-start">
+                                    <h5 className="text-white">Calls center efficiency Rate(%)</h5>
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <Col className="d-flex justify-content-start">
+                                    <h1 className="text-white">510</h1>
+                                    </Col>
+                                </Row>
+                                </Col>
+                                <Col lg={5} className="d-flex justify-content-start">
+                                <img src={Center} height={50} width={50}/>
+                                </Col>
+                            </Row>
+                        </Card>
+                    </Col>
+                  </Row>
+                </Col>
+                <Col lg={4}>
                 <Card className="p-3" style={{backgroundColor:"#002151"}}> 
-                 <ReactApexChart options={optionsdount} series={seriesdount} type="donut"  width={380} />
+                <Row>
+                  <Col className="d-flex justify-content-center">
+                  <ReactApexChart options={optionsdount} series={seriesdount} type="donut"  width={410} />
+                  </Col>
+                </Row>
+                 
                 </Card>
                 </Col>
-                <Col>
-                <Card className="p-3" style={{backgroundColor:"#002151"}}> 
-                <ReactApexChart options={optionss} series={seriess} type="line" height={273} />
+                <Col lg={5}>
+                <Card className="p-2" style={{backgroundColor:"#002151"}}> 
+                <ReactApexChart options={optionss} series={seriess} type="line" height={310} />
                 </Card>
                 </Col>
                 
             </Row>
+
+          
         </div>
     );
 }

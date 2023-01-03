@@ -550,15 +550,15 @@ export default function Model3(){
                   <Card className="p-3" style={{backgroundColor:"#002151"}}>
                   <Row className="mt-2">
                   
-                    <Col>
+                    <Col lg={5}>
                     <img src={Bounce} height={50} width={50}/>
                     </Col>
-                    <Col>
+                    <Col lg={7}>
                     <Row>
-                      <h4 className="text-white">Bounces</h4>
+                      <h4 className="text-white">Bounces Rate(%)</h4>
                     </Row>
                     <Row className="mt-2">
-                      <h1 className="text-white">300</h1>
+                      <h1 className="text-white">30%</h1>
                     </Row>
                     </Col>
                     
@@ -568,15 +568,15 @@ export default function Model3(){
                   <Card className="p-3 mt-3" style={{backgroundColor:"#002151"}}>
                   <Row >
                   
-                    <Col>
+                    <Col lg={5}>
                     <img src={Average} height={50} width={50}/>
                     </Col>
-                    <Col>
+                    <Col lg={7}>
                     <Row>
-                      <h4 className="text-white">Average Users</h4>
+                      <h4 className="text-white">Covertion Rate(%)</h4>
                     </Row>
                     <Row className="mt-2">
-                      <h1 className="text-white">790</h1>
+                      <h1 className="text-white">20%</h1>
                     </Row>
                     </Col>
                     
@@ -586,12 +586,12 @@ export default function Model3(){
                   <Card className="p-3 mt-3" style={{backgroundColor:"#002151"}}>
                   <Row >
                   
-                    <Col>
+                    <Col lg={5}>
                     <img src={Old} height={50} width={50}/>
                     </Col>
-                    <Col>
+                    <Col lg={7}>
                     <Row>
-                      <h4 className="text-white">Old Users</h4>
+                      <h4 className="text-white">List growth rate(%)</h4>
                     </Row>
                     <Row className="mt-2">
                       <h1 className="text-white">400</h1>
@@ -604,12 +604,12 @@ export default function Model3(){
                   <Card className="p-3 mt-3" style={{backgroundColor:"#002151"}}>
                   <Row >
                   
-                    <Col>
+                    <Col lg={5}>
                     <img src={New} height={50} width={50}/>
                     </Col>
-                    <Col>
+                    <Col lg={7}>
                     <Row>
-                      <h4 className="text-white">New Users</h4>
+                      <h4 className="text-white">Autoreply rate(%)</h4>
                     </Row>
                     <Row className="mt-2">
                       <h1 className="text-white">100</h1>

@@ -698,12 +698,12 @@ export default function Model2(){
                 
                       <Row>
                           <Col className="">
-                          <h4 className="text-white">Email clicked</h4>
+                          <h4 className="text-white">Spam rate(%)</h4>
                           </Col>
                       </Row>
                       <Row>
                           <Col className="">
-                          <h2 className="text-white">50</h2>
+                          <h2 className="text-white">5%</h2>
                           </Col>
                       </Row>
               
@@ -724,12 +724,12 @@ export default function Model2(){
                 
                       <Row>
                           <Col className="">
-                          <h4 className="text-white">Email UnClicked</h4>
+                          <h4 className="text-white">Unsubscribe rate(%)</h4>
                           </Col>
                       </Row>
                       <Row>
                           <Col className="">
-                          <h2 className="text-white">50</h2>
+                          <h2 className="text-white">50%</h2>
                           </Col>
                       </Row>
               

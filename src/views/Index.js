@@ -139,12 +139,12 @@ const Index = (props) => {
           <Tab eventKey="call" title="Call Campaign">
            <Call/>
           </Tab>
-          <Tab eventKey="pipeline" title="Pipeline">
+          {/* <Tab eventKey="pipeline" title="Pipeline">
            <Pipline/>
           </Tab>
           <Tab eventKey="social" title="Social Media Campaign">
           <Social/>
-          </Tab>
+          </Tab> */}
           {/* <Tab eventKey="email1" title="Email">
           <Email/>
           </Tab> */}

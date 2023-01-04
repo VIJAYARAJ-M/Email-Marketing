@@ -573,7 +573,7 @@ export default function Model3(){
                     </Col>
                     <Col lg={7}>
                     <Row>
-                      <h4 className="text-white">Covertion Rate(%)</h4>
+                      <h4 className="text-white">Coversion Rate(%)</h4>
                     </Row>
                     <Row className="mt-2">
                       <h1 className="text-white">20%</h1>

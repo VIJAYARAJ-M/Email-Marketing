@@ -272,7 +272,7 @@ export default function Call1(){
                                 <Col lg={7}>
                                 <Row>
                                     <Col className="d-flex justify-content-start">
-                                    <h5 className="text-white">Inbound call convertion Rate(%)</h5>
+                                    <h5 className="text-white">Inbound call conversion Rate(%)</h5>
                                     </Col>
                                 </Row>
                                 <Row>
@@ -293,7 +293,7 @@ export default function Call1(){
                                 <Col lg={8}>
                                 <Row>
                                     <Col className="d-flex justify-content-start">
-                                    <h5 className="text-white">Outbound call convertion Rate(%)</h5>
+                                    <h5 className="text-white">Outbound call conversion Rate(%)</h5>
                                     </Col>
                                 </Row>
                                 <Row>
@@ -314,12 +314,12 @@ export default function Call1(){
                                 <Col lg={7}>
                                 <Row>
                                     <Col className="d-flex justify-content-start">
-                                    <h5 className="text-white">Average handle time Rate(%)</h5>
+                                    <h5 className="text-white">Average handle time(min)</h5>
                                     </Col>
                                 </Row>
                                 <Row>
                                     <Col className="d-flex justify-content-start">
-                                    <h1 className="text-white">20%</h1>
+                                    <h1 className="text-white">20</h1>
                                     </Col>
                                 </Row>
                                 </Col>

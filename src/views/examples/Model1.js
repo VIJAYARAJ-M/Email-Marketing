@@ -573,7 +573,7 @@ export default function model1(){
                
                     <Row>
                         <Col className="">
-                        <h4 className="text-white">Recepients</h4>
+                        <h4 className="text-white">Recipients</h4>
                         </Col>
                     </Row>
                     <Row>

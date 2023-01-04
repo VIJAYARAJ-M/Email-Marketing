@@ -154,7 +154,7 @@ export default function Call(){
                             <Col lg={7}>
                             <Row>
                                 <Col className="d-flex justify-content-start">
-                                <h5 className="text-white">Calls Volume Rate(%)</h5>
+                                <h5 className="text-white">Call Volume Rate(%)</h5>
                                 </Col>
                             </Row>
                             <Row>
@@ -243,7 +243,7 @@ export default function Call(){
                                 <Col lg={7}>
                                 <Row>
                                     <Col className="d-flex justify-content-start">
-                                    <h5 className="text-white">Calls Duration Rate(%)</h5>
+                                    <h5 className="text-white">Call Duration Rate(%)</h5>
                                     </Col>
                                 </Row>
                                 <Row>
@@ -266,7 +266,7 @@ export default function Call(){
                                 <Col lg={7}>
                                 <Row>
                                     <Col className="d-flex justify-content-start">
-                                    <h5 className="text-white">Calls routing data Rate(%)</h5>
+                                    <h5 className="text-white">Call routing data Rate(%)</h5>
                                     </Col>
                                 </Row>
                                 <Row>
@@ -289,7 +289,7 @@ export default function Call(){
                                 <Col lg={7}>
                                 <Row>
                                     <Col className="d-flex justify-content-start">
-                                    <h5 className="text-white">Calls center efficiency Rate(%)</h5>
+                                    <h5 className="text-white">Call center efficiency Rate(%)</h5>
                                     </Col>
                                 </Row>
                                 <Row>

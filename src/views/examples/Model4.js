@@ -19,7 +19,8 @@ import Forward from "../../../src/assets/img/brand/Forward.png"
 import Count from "../../../src/assets/img/brand/Handle.png"
 import BounceCount from "../../../src/assets/img/brand/BounceCount.png"
 import Unique from "../../../src/assets/img/brand/UniqueClick.png"
-import Old from "../../../src/assets/img/brand/new.png"
+
+import Hard from "../../../src/assets/img/brand/Hardness.png"
 
 
 const seriesarea= [{
@@ -553,7 +554,7 @@ export default function Model4(){
                   <Row >
                   
                     <Col lg={4} className="d-flex justify-content-center align-items-center">
-                    <img src={Unique} height={40} width={40}/>
+                    <img src={Hard} height={40} width={40}/>
                     </Col>
                     <Col lg={8}>
                     <Row>

@@ -555,7 +555,7 @@ export default function Model3(){
                     </Col>
                     <Col lg={7}>
                     <Row>
-                      <h4 className="text-white">Bounces Rate(%)</h4>
+                      <h4 className="text-white">Bounce Rate(%)</h4>
                     </Row>
                     <Row className="mt-2">
                       <h1 className="text-white">30%</h1>
@@ -565,7 +565,7 @@ export default function Model3(){
                   </Row>
                   
                   </Card>
-                  <Card className="p-3 mt-3" style={{backgroundColor:"#002151"}}>
+                  <Card className="p-3 mt-2" style={{backgroundColor:"#002151"}}>
                   <Row >
                   
                     <Col lg={5}>
@@ -583,7 +583,7 @@ export default function Model3(){
                   </Row>
                   
                   </Card>
-                  <Card className="p-3 mt-3" style={{backgroundColor:"#002151"}}>
+                  <Card className="p-3 mt-2" style={{backgroundColor:"#002151"}}>
                   <Row >
                   
                     <Col lg={5}>
@@ -591,7 +591,7 @@ export default function Model3(){
                     </Col>
                     <Col lg={7}>
                     <Row>
-                      <h4 className="text-white">List growth rate(%)</h4>
+                      <h4 className="text-white">List growth Rate(%)</h4>
                     </Row>
                     <Row className="mt-2">
                       <h1 className="text-white">40%</h1>
@@ -601,7 +601,7 @@ export default function Model3(){
                   </Row>
                   
                   </Card>
-                  <Card className="p-3 mt-3" style={{backgroundColor:"#002151"}}>
+                  <Card className="p-3 mt-2" style={{backgroundColor:"#002151"}}>
                   <Row >
                   
                     <Col lg={5}>
@@ -609,7 +609,7 @@ export default function Model3(){
                     </Col>
                     <Col lg={7}>
                     <Row>
-                      <h4 className="text-white">Autoreply rate(%)</h4>
+                      <h4 className="text-white">Autoreply Rate(%)</h4>
                     </Row>
                     <Row className="mt-2">
                       <h1 className="text-white">10%</h1>

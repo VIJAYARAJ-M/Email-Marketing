@@ -14,11 +14,11 @@ import Recepient from "../../../src/assets/img/brand/Recepients.png"
 import Delivery from "../../../src/assets/img/brand/Deliverys.png"
 import Open from "../../../src/assets/img/brand/Opens.png"
 import Unopen from "../../../src/assets/img/brand/Unopen.png"
-import Click from "../../../src/assets/img/brand/Clicked.png"
-import Unclick from "../../../src/assets/img/brand/unclicked.png"
-import Bounce from "../../../src/assets/img/brand/Bounced.png"
-import Average from "../../../src/assets/img/brand/Average.png"
-import New from "../../../src/assets/img/brand/Old.png"
+import Click from "../../../src/assets/img/brand/Clicks.png"
+import Forward from "../../../src/assets/img/brand/Forward.png"
+import Count from "../../../src/assets/img/brand/Handle.png"
+import BounceCount from "../../../src/assets/img/brand/BounceCount.png"
+import Unique from "../../../src/assets/img/brand/UniqueClick.png"
 import Old from "../../../src/assets/img/brand/new.png"
 
 
@@ -126,7 +126,7 @@ const table = [{
 },
 
 ]
-const seriesdount= [44, 55, 13, 43, 22]
+const seriesdount= [44, 5]
 
 const optionsdount= {
   chart: {
@@ -136,8 +136,14 @@ const optionsdount= {
   stroke: {
     width: 0
   },
-  labels: ['Campign 1', 'Campign 2', 'Campign 3', 'Campign 4 ', 'Campign 5'],
-  colors:["#6f42c1", "#007bff","#17a2b8", "#00cccc", "#adb2bd"],
+  title: {
+    text: 'Opened Vs Unsubscribed',
+    style:{
+      color:"white",
+    }
+  },
+  labels: ['Opened', 'Unsubscribed'],
+  colors:["#00cccc", "#007bff"],
   plotOptions: {
     pie: {
       donut: {
@@ -167,7 +173,7 @@ const optionsdount= {
   }]
 }
 
-const series11= [44, 55, 13, 43, 22]
+const series11= [44, 5]
 
 
 
@@ -176,11 +182,17 @@ const options11= {
     width: 380,
     type: 'pie',
   },
+  title: {
+    text: 'Delivered Vs Unsubscribed',
+    style:{
+      color:"white",
+    }
+  },
   stroke: {
     width: 0
   },
-  labels: ['Campign 1', 'Campign 2', 'Campign 3', 'Campign 4 ', 'Campign 5'],
-  colors:["#6f42c1", "#007bff","#17a2b8", "#00cccc", "#adb2bd"],
+  labels: ['Delivered', 'Unsubscribed'],
+  colors:["#6f42c1", "#00cccc",],
   plotOptions: {
     pie: {
       donut: {
@@ -210,11 +222,11 @@ const options11= {
   }]
 }
 const series111=[{
-  name: 'New Users',
+  name: 'Hard Bounce',
   type: 'column',
-  data: [440, 505, 414, 671, 227, 413, 201, 352, 752, 320, 257, 160]
+  data: [40, 50, 41, 67, 22, 41, 20, 35, 75, 32, 25, 16]
 }, {
-  name: 'Users',
+  name: 'Soft bounce',
   type: 'line',
   data: [23, 42, 35, 27, 43, 22, 17, 31, 22, 22, 12, 16]
 }]
@@ -230,7 +242,7 @@ const options111={
     width: [0, 4]
   },
   title: {
-    text: 'Users',
+    text: 'Bounce Categories',
     style:{
      color:"white",
     },
@@ -248,9 +260,10 @@ const options111={
     
     }
   },
-  labels: ['01 Jan 2001', '02 Jan 2001', '03 Jan 2001', '04 Jan 2001', '05 Jan 2001', '06 Jan 2001', '07 Jan 2001', '08 Jan 2001', '09 Jan 2001', '10 Jan 2001', '11 Jan 2001', '12 Jan 2001'],
+  labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 
+  'Jul', 'Aug', 'Sep', 'Oct', 'Nev', 'Dec'],
   xaxis: {
-    type: 'datetime',
+    type: 'year',
     labels:{
       style:{
         colors:"white",
@@ -260,7 +273,7 @@ const options111={
   },
   yaxis: [{
     title: {
-      text: 'New Users',
+      text: 'Hard Bounce Count',
       style:{
         color:"white",
       }
@@ -275,7 +288,7 @@ const options111={
   }, {
     opposite: true,
     title: {
-      text: 'Users',
+      text: 'Soff bounce count',
       style:{
         color:"white"
       }
@@ -528,237 +541,150 @@ const  series22= [{
     },
   }
 
-  const seriescolumn= [{
-    name: 'Call',
-    data: [44, 55, 41, 67, 22, 43, 21, 49]
-  }, {
-    name: 'Form',
-    data: [13, 23, 20, 8, 13, 27, 33, 12]
-  }]
-
- const optionscolumn= {
-    chart: {
-      type: 'bar',
-      height: 350,
-      stacked: true,
-      stackType: '100%',
-      toolbar:{
-        show:!1,
-      }
-    },
-    title: {
-      text: 'Average conversion, call and form rate for Email',
-      style:{
-        color:"white",
-       
-      }
-    },
-    responsive: [{
-      breakpoint: 480,
-      options: {
-        legend: {
-          position: 'bottom',
-          offsetX: -10,
-          offsetY: 0
-        }
-      }
-    }],
-    
-    xaxis: {
-      categories: ['Jan', 'Feb', 'Mar', 'App', 'May', 'Jun',
-        'Jul', 'Aug'
-      ],
-      style:{
-        color:"white",
-      },labels:{
-        style:{
-          colors:"white",
-          
-        },
-  },
-    },
-    yaxis: {
-        title: {
-          text: 'Count',
-          style:{
-            color:"white",
-          },
-          
-        },
-        labels:{
-          style:{
-            colors:"white",
-            
-          },
-    },
-      },
-     
-    
-    fill: {
-      opacity: 1
-    },
-    legend: {
-      position: 'right',
-      offsetX: 0,
-      offsetY: 50,
-      labels: {
-    
-        colors:"white",
-        
-        }
-    },
-  }
-export default function Model2(){
+export default function Model4(){
 
     return(
         <div>
-           
 
-           <Row className="mt-4">
-            <Col lg={3}>
-              <Row>
-              <Col >
-                  <Card className="p-3" style={{backgroundColor:"#002151"}}>
-                    <Row>
-                      <Col lg={3} className="justify-content-center d-flex align-items-center">
-                       <img src={Open} height={50} width={50}/>
-                      </Col>
-                      <Col lg={9} >
-               
-                    <Row>
-                        <Col className="">
-                        <h4 className="text-white">Open Rate(%)</h4>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col className="">
-                        <h2 className="text-white">80%</h2>
-                        </Col>
-                    </Row>
-             
-                      </Col>
-                    </Row>
-                  </Card>
-                  </Col>
-              </Row>
-
-              <Row className="mt-4">
-              <Col >
-                  <Card className="p-3" style={{backgroundColor:"#002151"}}>
-                    <Row>
-                      <Col lg={3} className="justify-content-center d-flex align-items-center">
-                       <img src={Unopen} height={50} width={50}/>
-                      </Col>
-                      <Col lg={9} >
-               
-                    <Row>
-                        <Col className="">
-                        <h4 className="text-white">Unopened Rate(%)</h4>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col className="">
-                        <h2 className="text-white">10%</h2>
-                        </Col>
-                    </Row>
-             
-                      </Col>
-                    </Row>
-                  </Card>
-                  </Col>
-              </Row>
-
-            </Col>
-            <Col lg={9}>
-            <Row>
-            <Col>
-              <Card className="p-2" style={{backgroundColor:"#002151"}}>
-              
-
-              <ReactApexChart options={optionscolumn} series={seriescolumn} type="bar" height={200} />
-
-    
-
-              </Card>
-            </Col>
-            </Row>
-            </Col>
-           </Row>
-
-           <Row className="mt-4">
-              <Col lg={3}>
-              <Row>
-              <Col >
-                    <Card className="p-3" style={{backgroundColor:"#002151"}}>
-                      <Row>
-                        <Col lg={3} className="justify-content-center d-flex align-items-center">
-                        <img src={Click} height={50} width={50}/>
-                        </Col>
-                        <Col lg={9}>
-                
-                      <Row>
-                          <Col className="">
-                          <h4 className="text-white">Spam Rate(%)</h4>
-                          </Col>
-                      </Row>
-                      <Row>
-                          <Col className="">
-                          <h2 className="text-white">5%</h2>
-                          </Col>
-                      </Row>
-              
-                        </Col>
-                      </Row>
-                    </Card>
+            <Row className="mt-4">
+                <Col lg={3}>
+                 
+                  <Card className="" style={{backgroundColor:"#002151"}}>
+                  <Row >
+                  
+                    <Col lg={4} className="d-flex justify-content-center align-items-center">
+                    <img src={Unique} height={40} width={40}/>
                     </Col>
-              </Row>
-
-              <Row className="mt-4">
-              <Col >
-                    <Card className="p-3" style={{backgroundColor:"#002151"}}>
-                      <Row>
-                        <Col lg={3} className="justify-content-center d-flex align-items-center">
-                        <img src={Unclick} height={50} width={50}/>
-                        </Col>
-                        <Col lg={9} >
-                
-                      <Row>
-                          <Col className="">
-                          <h4 className="text-white">Unsubscribe Rate(%)</h4>
-                          </Col>
-                      </Row>
-                      <Row>
-                          <Col className="">
-                          <h2 className="text-white">50%</h2>
-                          </Col>
-                      </Row>
-              
-                        </Col>
-                      </Row>
-                    </Card>
+                    <Col lg={8}>
+                    <Row>
+                      <h4 className="text-white">Hard bounce count Rate(%)</h4>
+                    </Row>
+                    <Row className="mt-2">
+                      <h1 className="text-white">40%</h1>
+                    </Row>
                     </Col>
-              </Row>
-              </Col>
-              <Col lg={9}>
-
-              <Row>
-              <Col>
-                <Card className="p-2" style={{backgroundColor:"#002151"}}>
-                <ReactApexChart options={optionssclick} series={seriessclick} type="line" height={220} />
-
-                </Card>
+                    
+                  </Row>
+                  
+                  </Card>
+                  <Card className=" mt-3" style={{backgroundColor:"#002151"}}>
+                  <Row >
+                  
+                    <Col lg={4} className="d-flex justify-content-center align-items-center">
+                    <img src={BounceCount} height={40} width={40}/>
+                    </Col>
+                    <Col lg={8}>
+                    <Row>
+                      <h4 className="text-white">Soft bounce count Rate(%)</h4>
+                    </Row>
+                    <Row className="mt-2">
+                      <h1 className="text-white">10%</h1>
+                    </Row>
+                    </Col>
+                    
+                  </Row>
+                  
+                  </Card>
+                  <Card className=" mt-3" style={{backgroundColor:"#002151"}}>
+                  <Row >
+                  
+                    <Col lg={4} className="d-flex justify-content-center align-items-center">
+                    <img src={Unique} height={40} width={40}/>
+                    </Col>
+                    <Col lg={8}>
+                    <Row>
+                      <h4 className="text-white">Unique click count Rate(%)</h4>
+                    </Row>
+                    <Row className="mt-2">
+                      <h1 className="text-white">40%</h1>
+                    </Row>
+                    </Col>
+                    
+                  </Row>
+                  
+                  </Card>
+                 
                 </Col>
-              </Row>
-              </Col>
-           </Row>
+                <Col lg={9}>
+
+                <Row>
+                  <Col>
+                  <Card className="" style={{backgroundColor:"#002151"}}>
+                  <Row className="">
+                  
+                    <Col lg={4} className="d-flex justify-content-center align-items-center">
+                    <img src={Click} height={40} width={40}/>
+                    </Col>
+                    <Col lg={8}>
+                    <Row>
+                      <h4 className="text-white">Click through Rate(%)</h4>
+                    </Row>
+                    <Row className="mt-2">
+                      <h1 className="text-white">30%</h1>
+                    </Row>
+                    </Col>
+                    
+                  </Row>
+                  
+                  </Card>
+                  </Col>
+                  <Col>
+                  <Card className="" style={{backgroundColor:"#002151"}}>
+                  <Row >
+                  
+                    <Col lg={4} className="d-flex justify-content-center align-items-center">
+                    <img src={Forward} height={40} width={40}/>
+                    </Col>
+                    <Col lg={8}>
+                    <Row>
+                      <h4 className="text-white">Forwarding Rate(%)</h4>
+                    </Row>
+                    <Row className="mt-2">
+                      <h1 className="text-white">20%</h1>
+                    </Row>
+                    </Col>
+                    
+                  </Row>
+                  
+                  </Card>
+                  </Col>
+
+                  <Col>
+                  <Card className="" style={{backgroundColor:"#002151"}}>
+                  <Row >
+                  
+                    <Col lg={4} className="d-flex justify-content-center align-items-center">
+                    <img src={Count} height={40} width={40}/>
+                    </Col>
+                    <Col lg={8}>
+                    <Row>
+                      <h4 className="text-white">Forward count Rate(%)</h4>
+                    </Row>
+                    <Row className="mt-2">
+                      <h1 className="text-white">40%</h1>
+                    </Row>
+                    </Col>
+                    
+                  </Row>
+                  
+                  </Card>
+                  </Col>
+                </Row>
+                
+                <Row className="mt-2">
+                  <Col>
+                    <Card className="p-3" style={{backgroundColor:"#002151"}}>
+                     <ReactApexChart options={options111} series={series111} type="line" height={220} />
+                    </Card>
+                  </Col>
+                </Row>
+                
+                </Col>
+            </Row>
 
            
-
 
           
-
-         
-
           
            
         </div>

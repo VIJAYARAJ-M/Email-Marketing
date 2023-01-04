@@ -216,7 +216,7 @@ const optionsdount1= {
     type: 'pie',
   },
   title: {
-    text: 'Call Destribution',
+    text: 'Call Distribution',
     align:"center",
    
     style:{
@@ -290,10 +290,10 @@ export default function Call1(){
               <Col>
                     <Card className="p-2" style={{backgroundColor:"#002151"}}>
                             <Row>
-                                <Col lg={7}>
+                                <Col lg={8}>
                                 <Row>
                                     <Col className="d-flex justify-content-start">
-                                    <h5 className="text-white">Outboundcall convertion Rate(%)</h5>
+                                    <h5 className="text-white">Outbound call convertion Rate(%)</h5>
                                     </Col>
                                 </Row>
                                 <Row>
@@ -302,8 +302,8 @@ export default function Call1(){
                                     </Col>
                                 </Row>
                                 </Col>
-                                <Col lg={5} className="d-flex justify-content-start">
-                                <img src={OutBound} height={50} width={50}/>
+                                <Col lg={4} className="d-flex justify-content-start">
+                                <img src={OutBound} height={40} width={40}/>
                                 </Col>
                             </Row>
                         </Card>

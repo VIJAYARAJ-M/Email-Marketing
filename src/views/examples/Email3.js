@@ -1,6 +1,8 @@
-import React from "react"
+import React,{useState ,useEffect} from "react"
 import {Row, Col, Card, Button,} from "reactstrap"
 import ReactApexChart from "react-apexcharts"
+import ReactMultiSelectCheckboxes from "react-multiselect-checkboxes"
+import Select from "react-select"
 
 import Recepient from "../../../src/assets/img/brand/Recepient.png"
 import Delivery from "../../../src/assets/img/brand/Email Delivery.png"
@@ -16,6 +18,25 @@ import Reply from "../../../src/assets/img/brand/Reply.png"
 
 import {FcDownload} from "react-icons/fc"
 
+
+const options = [{
+    "id": 1,
+    "value": "9ce42304-b732-4791-9731-6f299b6df8c7",
+    "label": "GS"
+  }, {
+    "id": 2,
+    "value": "90419f06-7d07-45c8-bcec-d675096fe27f",
+    "label": "Blue base"
+  }, {
+    "id": 3,
+    "value": "a23521da-0a48-4ef6-baa2-d727704f65c2",
+    "label": "Shiash"
+  }, {
+    "id": 4,
+    "value": "34b2b58a-0123-49e2-b2de-1eef0922139b",
+    "label": "Xo"
+  },]
+
 const seriesbar1= [{
     name: 'Net Profit',
     data: [44, 55, 57, 56, 61]
@@ -28,6 +49,7 @@ const seriesbar1= [{
         show:!1,
       }
     },
+    colors: ["#6026c5"],
     plotOptions: {
       bar: {
         horizontal: false,
@@ -50,12 +72,7 @@ const seriesbar1= [{
       colors: ['transparent']
     },
     xaxis: {
-        title: {
-            text: 'year',
-            style:{
-                color:"white",
-            }
-          },
+        
       categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun'],
       labels:{
         style:{
@@ -79,29 +96,29 @@ const seriesbar1= [{
         },
   },
     },
-    fill: {
-        type: "gradient",
+    // fill: {
+    //     type: "gradient",
 
-        gradient: {
-          shadeIntensity: 1,
-          type: "vertical",
-          opacityFrom: 0.7,
-          opacityTo: 0.9,
-          colorStops: [
-            {
-              offset: 0,
-              color: "#6026c5",
-              opacity: 1
-            },
+    //     gradient: {
+    //       shadeIntensity: 1,
+    //       type: "vertical",
+    //       opacityFrom: 0.7,
+    //       opacityTo: 0.9,
+    //       colorStops: [
+    //         {
+    //           offset: 0,
+    //           color: "#6026c5",
+    //           opacity: 1
+    //         },
 
-            {
-              offset: 100,
-              color: "#002151",
-              opacity: 1
-            }
-          ]
-        }
-      },
+    //         {
+    //           offset: 100,
+    //           color: "#002151",
+    //           opacity: 1
+    //         }
+    //       ]
+    //     }
+    //   },
     tooltip: {
       y: {
         formatter: function (val) {
@@ -139,6 +156,7 @@ const seriesbar1= [{
     dataLabels: {
       enabled: false
     },
+    colors: ["#2bc7b2"],
     stroke: {
       show: true,
       width: 2,
@@ -167,29 +185,29 @@ const seriesbar1= [{
         },
   },
     },
-    fill: {
-    type: "gradient",
+//     fill: {
+//     type: "gradient",
 
-    gradient: {
-      shadeIntensity: 1,
-      type: "vertical",
-      opacityFrom: 0.7,
-      opacityTo: 0.9,
-      colorStops: [
-        {
-          offset: 0,
-          color: "#2bc7b2",
-          opacity: 1
-        },
+//     gradient: {
+//       shadeIntensity: 1,
+//       type: "vertical",
+//       opacityFrom: 0.7,
+//       opacityTo: 0.9,
+//       colorStops: [
+//         {
+//           offset: 0,
+//           color: "#2bc7b2",
+//           opacity: 1
+//         },
 
-        {
-          offset: 100,
-          color: "#002151",
-          opacity: 1
-        }
-      ]
-    }
-  },
+//         {
+//           offset: 100,
+//           color: "#002151",
+//           opacity: 1
+//         }
+//       ]
+//     }
+//   },
     tooltip: {
       y: {
         formatter: function (val) {
@@ -200,13 +218,51 @@ const seriesbar1= [{
   }
 
 export default function Email3(){
+    const [selectedOptions, setSelectedOptions] = useState([]);
+
+    useEffect(() => {
+      setSelectedOptions([{ label: "All", value: "*" }, ...options]);
+    }, []);
+  
+    function getDropdownButtonLabel({ placeholderButtonLabel, value }) {
+      if (value && value.some((o) => o.value === "*")) {
+        return `${placeholderButtonLabel}: All`;
+      } else {
+        return `${placeholderButtonLabel}: ${value.length} selected`;
+      }
+    }
+  
+    function onChange(value, event) {
+      if (event.action === "select-option" && event.option.value === "*") {
+        this.setState(this.options);
+      } else if (
+        event.action === "deselect-option" &&
+        event.option.value === "*"
+      ) {
+        this.setState([]);
+      } else if (event.action === "deselect-option") {
+        this.setState(value.filter((o) => o.value !== "*"));
+      } else if (value.length === this.options.length - 1) {
+        this.setState(this.options);
+      } else {
+        this.setState(value);
+      }
+    }
+  
+
+
     return(
         <div>
             <h2>Email3</h2>
-
             <Row>
+                <Col className="d-flex justify-content-center">
+                  <h2 className="text-white">Email Campaign Report</h2>
+                </Col>
+            </Row>
+
+            <Row >
                 <Col>
-                  <Card className="p-3" style={{backgroundColor:"#002151"}}>
+                  <Card className="p-2" style={{backgroundColor:"#002151"}}>
                     <Row>
                         <Col lg={3} className="d-flex justify-content-center">
                          <Card className="" style={{backgroundColor:"#002151"}}>
@@ -244,8 +300,33 @@ export default function Email3(){
                          </Card>
                         
                         </Col>
+                        <Col lg={3} className="d-flex justify-content-center">
+                         <Card className="" style={{backgroundColor:"#002151"}}>
+                         
+                          <Row>
+                            <Col>
+                             <h3 className="text-white">Campaigns</h3>
+                            </Col>
+                          </Row>
+
+                          <Row>
+                            <Col>
+                            <ReactMultiSelectCheckboxes
+                                              options={[{ label: "All", value: "*" }, ...options]}
+                                              placeholderButtonLabel="Select"
+                                              getDropdownButtonLabel={getDropdownButtonLabel}
+                                              value={selectedOptions}
+                                              onChange={onChange}
+                                              setState={setSelectedOptions}
+                                            />
+                            </Col>
+                          </Row>
+                          
+                         </Card>
+                        
+                        </Col>
                        
-                        <Col lg={6} className="d-flex justify-content-end align-items-center">
+                        <Col lg={3} className="d-flex justify-content-end align-items-center">
                             <Row>
                                 <Col>
                                 <Button>Apply</Button>
@@ -258,7 +339,7 @@ export default function Email3(){
                 </Col>
             </Row>
 
-            <Row className="mt-3">
+            <Row className="mt-2">
                 <Col>
                     <Card className="p-3" style={{backgroundColor:"#002151"}}>
                         <Row>
@@ -270,7 +351,7 @@ export default function Email3(){
                         </Row>
                         <Row className="mt-2">
                             <Col className="d-flex justify-content-center ">
-                            <h3 className="text-white">700</h3>
+                            <h3 className="text-white">1,165</h3>
                             </Col>
                         </Row>
                             </Col>
@@ -295,7 +376,7 @@ export default function Email3(){
                         </Row>
                         <Row className="mt-2">
                             <Col className="d-flex justify-content-center ">
-                            <h3 className="text-white">17</h3>
+                            <h3 className="text-white">16</h3>
                             </Col>
                         </Row>
                             </Col>
@@ -320,7 +401,7 @@ export default function Email3(){
                         </Row>
                         <Row className="mt-2">
                             <Col className="d-flex justify-content-center ">
-                            <h3 className="text-white">299(39.7%)</h3>
+                            <h3 className="text-white">308(36.4%)</h3>
                             </Col>
                         </Row>
                             </Col>
@@ -345,7 +426,7 @@ export default function Email3(){
                         </Row>
                         <Row className="mt-2">
                             <Col className="d-flex justify-content-center ">
-                            <h3 className="text-white">16(1.8%)</h3>
+                            <h3 className="text-white">12(1.0%)</h3>
                             </Col>
                         </Row>
                             </Col>
@@ -361,7 +442,7 @@ export default function Email3(){
                 </Col>
             </Row>
 
-            <Row className="mt-3">
+            <Row className="mt-2">
                 <Col lg={3}>
                     <Row>
                     <Col>
@@ -370,12 +451,12 @@ export default function Email3(){
                             <Col lg={6}>
                             <Row>
                             <Col className="d-flex justify-content-center ">
-                            <h5 className="text-white">Bounce</h5>
+                            <h5 className="text-white">Bounces</h5>
                             </Col>
                         </Row>
                         <Row className="mt-2">
                             <Col className="d-flex justify-content-center ">
-                            <h3 className="text-white">119(10.1%)</h3>
+                            <h3 className="text-white">119(10.2%)</h3>
                             </Col>
                         </Row>
                             </Col>

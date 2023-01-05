@@ -555,7 +555,7 @@ export default function Model3(){
                     </Col>
                     <Col lg={7}>
                     <Row>
-                      <h4 className="text-white">Bounce Rate(%)</h4>
+                      <h4 className="text-white">Bounce Rate</h4>
                     </Row>
                     <Row className="mt-2">
                       <h1 className="text-white">30%</h1>
@@ -573,7 +573,7 @@ export default function Model3(){
                     </Col>
                     <Col lg={7}>
                     <Row>
-                      <h4 className="text-white">Coversion Rate(%)</h4>
+                      <h4 className="text-white">Coversion Rate</h4>
                     </Row>
                     <Row className="mt-2">
                       <h1 className="text-white">20%</h1>
@@ -591,7 +591,7 @@ export default function Model3(){
                     </Col>
                     <Col lg={7}>
                     <Row>
-                      <h4 className="text-white">List growth Rate(%)</h4>
+                      <h4 className="text-white">List growth Rate</h4>
                     </Row>
                     <Row className="mt-2">
                       <h1 className="text-white">40%</h1>
@@ -609,7 +609,7 @@ export default function Model3(){
                     </Col>
                     <Col lg={7}>
                     <Row>
-                      <h4 className="text-white">Autoreply Rate(%)</h4>
+                      <h4 className="text-white">Autoreply Rate</h4>
                     </Row>
                     <Row className="mt-2">
                       <h1 className="text-white">10%</h1>
@@ -625,7 +625,7 @@ export default function Model3(){
                 <Row>
                   <Col>
                     <Card className="p-3" style={{backgroundColor:"#002151"}}>
-                     <ReactApexChart options={options111} series={series111} type="line" height={220} />
+                     <ReactApexChart options={options111} series={series111} type="line" height={197} />
                     </Card>
                   </Col>
                 </Row>

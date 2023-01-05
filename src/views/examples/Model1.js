@@ -553,6 +553,168 @@ const  series22= [{
     },
   }
 
+  const seriesRador =   [44, 55, 67, 83]
+  const optionsRador= {
+    chart: {
+      height: 350,
+      type: 'radialBar',
+    },
+    plotOptions: {
+      radialBar: {
+        dataLabels: {
+          name: {
+            fontSize: '22px',
+          },
+          value: {
+            fontSize: '16px',
+          },
+          total: {
+            show: true,
+            label: 'Total',
+            formatter: function (w) {
+              // By default this function returns the average of all series. The below is just an example to show the use of custom formatter function
+              return 249
+            }
+          }
+        }
+      }
+    },
+    labels: ['Apples', 'Oranges', 'Bananas', 'Berries'],
+  }
+  const seriescol= [{
+    name: 'Servings',
+    data: [44, 55, 41, 67, 22, 43, 21, 33, 45, 31, 87, 65, 35]
+  }]
+
+  const optionscol= {
+    annotations: {
+      points: [{
+        x: 'Bananas',
+        seriesIndex: 0,
+        label: {
+          borderColor: '#775DD0',
+          offsetY: 0,
+          style: {
+            color: '#fff',
+            background: '#775DD0',
+          },
+          text: 'Bananas are good',
+        }
+      }]
+    },
+    chart: {
+      height: 350,
+      type: 'bar',
+    },
+    plotOptions: {
+      bar: {
+        borderRadius: 10,
+        columnWidth: '50%',
+      }
+    },
+    dataLabels: {
+      enabled: false
+    },
+    stroke: {
+      width: 2
+    },
+    
+    grid: {
+      row: {
+        colors: ['#fff', '#f2f2f2']
+      }
+    },
+    xaxis: {
+      labels: {
+        rotate: -45
+      },
+      categories: ['Apples', 'Oranges', 'Strawberries', 'Pineapples', 'Mangoes', 'Bananas',
+        'Blackberries', 'Pears', 'Watermelons', 'Cherries', 'Pomegranates', 'Tangerines', 'Papayas'
+      ],
+      tickPlacement: 'on'
+    },
+    yaxis: {
+      title: {
+        text: 'Servings',
+      },
+    },
+    fill: {
+      type: 'gradient',
+      gradient: {
+        shade: 'light',
+        type: "horizontal",
+        shadeIntensity: 0.25,
+        gradientToColors: undefined,
+        inverseColors: true,
+        opacityFrom: 0.85,
+        opacityTo: 0.85,
+        stops: [50, 0, 100]
+      },
+    }
+  }
+
+const seriestree= [
+    {
+      data: [
+        {
+          x: 'Campaign 1',
+          y: 218
+        },
+        {
+          x: 'Campaign 2',
+          y: 149
+        },
+        {
+          x: 'Campaign 3',
+          y: 184
+        },
+        {
+          x: 'Campaign 4',
+          y: 55
+        },
+        {
+          x: 'Campaign 5',
+          y: 84
+        },
+        
+        
+      ]
+    }
+  ]
+const optionstree= {
+    legend: {
+      show: false
+    },
+    chart: {
+      height: 350,
+      type: 'treemap',
+      toolbar:{
+        show:!1,
+      }
+    },
+    title: {
+      text: 'Total Sent mail',
+      align: 'center',
+      style:{
+        color:"white",
+      }
+    },
+    colors: [
+      '#007bff',
+      '#17a2b8',
+      '#00cccc',
+      '#adb2bd',
+      '#6f42c1',
+     
+    ],
+    plotOptions: {
+      treemap: {
+        distributed: true,
+        enableShades: false
+      }
+    }
+  }
+
 export default function model1(){
 
     return(
@@ -706,6 +868,17 @@ export default function model1(){
                         </Table>
                             </Card>
                         
+              </Col>
+            </Row>
+
+           
+
+            <Row className="mt-4">
+              <Col lg={3}>
+              <Card className="p-3" style={{backgroundColor:"#002151"}}>
+              
+              <ReactApexChart options={optionstree} series={seriestree} type="treemap" height={200} />
+              </Card>
               </Col>
             </Row>
 

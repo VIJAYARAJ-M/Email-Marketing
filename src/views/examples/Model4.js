@@ -550,7 +550,7 @@ export default function Model4(){
             <Row className="mt-4">
                 <Col lg={3}>
                  
-                  <Card className="" style={{backgroundColor:"#002151"}}>
+                  <Card className="p-3" style={{backgroundColor:"#002151"}}>
                   <Row >
                   
                     <Col lg={4} className="d-flex justify-content-center align-items-center">
@@ -558,7 +558,7 @@ export default function Model4(){
                     </Col>
                     <Col lg={8}>
                     <Row>
-                      <h4 className="text-white">Hard bounce count Rate(%)</h4>
+                      <h4 className="text-white">Hard bounce count Rate</h4>
                     </Row>
                     <Row className="mt-2">
                       <h1 className="text-white">40%</h1>
@@ -568,7 +568,7 @@ export default function Model4(){
                   </Row>
                   
                   </Card>
-                  <Card className=" mt-3" style={{backgroundColor:"#002151"}}>
+                  <Card className=" p-3 mt-3" style={{backgroundColor:"#002151"}}>
                   <Row >
                   
                     <Col lg={4} className="d-flex justify-content-center align-items-center">
@@ -576,7 +576,7 @@ export default function Model4(){
                     </Col>
                     <Col lg={8}>
                     <Row>
-                      <h4 className="text-white">Soft bounce count Rate(%)</h4>
+                      <h4 className="text-white">Soft bounce count Rate</h4>
                     </Row>
                     <Row className="mt-2">
                       <h1 className="text-white">10%</h1>
@@ -586,7 +586,7 @@ export default function Model4(){
                   </Row>
                   
                   </Card>
-                  <Card className=" mt-3" style={{backgroundColor:"#002151"}}>
+                  <Card className="p-3 mt-3" style={{backgroundColor:"#002151"}}>
                   <Row >
                   
                     <Col lg={4} className="d-flex justify-content-center align-items-center">
@@ -594,7 +594,7 @@ export default function Model4(){
                     </Col>
                     <Col lg={8}>
                     <Row>
-                      <h4 className="text-white">Unique click count Rate(%)</h4>
+                      <h4 className="text-white">Unique click count Rate</h4>
                     </Row>
                     <Row className="mt-2">
                       <h1 className="text-white">40%</h1>
@@ -618,7 +618,7 @@ export default function Model4(){
                     </Col>
                     <Col lg={8}>
                     <Row>
-                      <h4 className="text-white">Click through Rate(%)</h4>
+                      <h4 className="text-white">Click - through Rate</h4>
                     </Row>
                     <Row className="mt-2">
                       <h1 className="text-white">30%</h1>
@@ -638,7 +638,7 @@ export default function Model4(){
                     </Col>
                     <Col lg={8}>
                     <Row>
-                      <h4 className="text-white">Forwarding Rate(%)</h4>
+                      <h4 className="text-white">Forwarding Rate</h4>
                     </Row>
                     <Row className="mt-2">
                       <h1 className="text-white">20%</h1>
@@ -659,7 +659,7 @@ export default function Model4(){
                     </Col>
                     <Col lg={8}>
                     <Row>
-                      <h4 className="text-white">Forward count Rate(%)</h4>
+                      <h4 className="text-white">Forward count Rate</h4>
                     </Row>
                     <Row className="mt-2">
                       <h1 className="text-white">40%</h1>
@@ -675,7 +675,7 @@ export default function Model4(){
                 <Row className="mt-2">
                   <Col>
                     <Card className="p-3" style={{backgroundColor:"#002151"}}>
-                     <ReactApexChart options={options111} series={series111} type="line" height={220} />
+                     <ReactApexChart options={options111} series={series111} type="line" height={313} />
                     </Card>
                   </Col>
                 </Row>

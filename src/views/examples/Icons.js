@@ -15,22 +15,49 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import { useState } from "react";
-// react component that copies the given text inside your clipboard
-import { CopyToClipboard } from "react-copy-to-clipboard";
-// reactstrap components
+import React  from "react"
+import { useEffect, useState } from "react";
+import classnames from "classnames";
+import Chart from "chart.js";
+import {FcPicture} from "react-icons/fc"
+//import "./Card.css";
 import {
+  Button,
   Card,
   CardHeader,
   CardBody,
+  NavItem,
+  NavLink,
+  Nav,
+  Progress,
+  Table,
   Container,
   Row,
   Col,
-  UncontrolledTooltip,
+  CardTitle,
+  CardText,
 } from "reactstrap";
-import ReactApexChart from "react-apexcharts";
-// core components
+
 import Header from "components/Headers/Header.js";
+import { NavDropdown, Tab, Tabs } from "react-bootstrap";
+
+import "../../views/inter.css";
+import 'bootstrap-daterangepicker/daterangepicker.css';
+import FeaturedInfo from "Funnel/funnel";
+import { DateRangePickerComponent } from "@syncfusion/ej2-react-calendars";
+import { ProgressCircular, ProgressLinear } from "ui-neumorphism";
+import 'ui-neumorphism/dist/index.css'
+import {BsFillPersonFill,BsStack,BsPersonLinesFill} from "react-icons/bs"
+import ReactApexChart from "react-apexcharts";
+//import 'react-date-range/dist/styles.css'; // main style file
+//import 'react-date-range/dist/theme/default.css'; // theme css file
+import Home from "./Home";
+import Email1 from "./Email1";
+import Email2 from "./Email2";
+import Email3 from "./Email3";
+import Email4 from "./Email4";
+
+
 
 const Ageseries4 = [{
   name: 'Age Count',
@@ -120,106 +147,39 @@ const Icons = () => {
     <>
       
       
-  <Container className="" fluid style={{backgroundColor:"#24344e"}}>
+  <Container className="pb-3  pt-md-8" fluid style={{backgroundColor:"#19335A"}}>
         {/* Table */}
-        <Row>
-          <Col className="justify-content-center d-flex" style={{marginTop:"90px"}}>
-          <h2>Marketing</h2>
-          </Col>
+        
           
             
-        </Row>
-        <Row className="mt-3">
-           <Col>
-           <Card style={{backgroundColor:"#5694dd"}}>
-            <Row>
-              <Col className="justify-content-center d-flex">
-              <h3 className="text-white">Renenue</h3>
-              </Col>
-            </Row>
-            <Row>
-              <Col className="justify-content-center d-flex">
-              <h1 className="text-white">$6.01M</h1>
-              </Col>
-            </Row>
-          
-           </Card>
-           </Col>
+        
+        <Tabs defaultActiveKey="email1" className="mt--4">
+          <Tab eventKey="home" title="Home">
+           <Home/>
+          </Tab>
 
-           <Col>
-           <Card style={{backgroundColor:"#5694dd"}}>
-            <Row>
-              <Col className="justify-content-center d-flex">
-              <h3 className="text-white">Profit</h3>
-              </Col>
-            </Row>
-            <Row>
-              <Col className="justify-content-center d-flex">
-              <h1 className="text-white">$6.01M</h1>
-              </Col>
-            </Row>
-          
-           </Card>
-           </Col>
+          <Tab eventKey="email1" title="Email 1">
+           <Email1/>
+          </Tab>
 
-           <Col>
-           <Card style={{backgroundColor:"#5694dd"}}>
-            <Row>
-              <Col className="justify-content-center d-flex">
-              <h3 className="text-white">Cost</h3>
-              </Col>
-            </Row>
-            <Row>
-              <Col className="justify-content-center d-flex">
-              <h1 className="text-white">$6.01M</h1>
-              </Col>
-            </Row>
+          <Tab eventKey="email2" title="Email 2">
+           <Email2/>
+          </Tab>
+          <Tab eventKey="email3" title="Email 3">
+           <Email3/>
+          </Tab>
+          <Tab eventKey="email4" title="Email 4">
+          <Email4/>
+          </Tab>
           
-           </Card>
-           </Col>
+          
+          
+          
 
-           <Col>
-           <Card style={{backgroundColor:"#5694dd"}}>
-            <Row>
-              <Col className="justify-content-center d-flex">
-              <h3 className="text-white">New Customer</h3>
-              </Col>
-            </Row>
-            <Row>
-              <Col className="justify-content-center d-flex">
-              <h1 className="text-white">$6.01M</h1>
-              </Col>
-            </Row>
-          
-           </Card>
-           </Col>
-
-           <Col>
-           <Card style={{backgroundColor:"#5694dd"}}>
-            <Row>
-              <Col className="justify-content-center d-flex">
-              <h3 className="text-white">Number Of Sales</h3>
-              </Col>
-            </Row>
-            <Row>
-              <Col className="justify-content-center d-flex">
-              <h1 className="text-white">$6.01M</h1>
-              </Col>
-            </Row>
-          
-           </Card>
-           </Col>
 
           
-           
-        </Row>
-        <Row className="">
-                        <Col>
-                        <Card className="p-4" style={{backgroundColor:"#00072b"}}>
-                          <ReactApexChart options={Ageoptions} series={Ageseries4} type="bar" height={289} />
-                        </Card>
-                        </Col>
-                      </Row>
+        </Tabs>
+       
       </Container>
     </>
   );

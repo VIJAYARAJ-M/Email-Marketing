@@ -407,13 +407,10 @@ export default function Home(){
         <div>
             <div>
               
-             <Row>
-          <Col className="justify-content-center d-flex" style={{marginTop:""}}>
-          <h2>Marketing</h2>
-          </Col>
+            
           
             
-        </Row>
+    
         <Row className="mt-3">
            <Col>
            <Card style={{backgroundColor:"#5694dd"}}>

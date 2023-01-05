@@ -154,7 +154,7 @@ export default function Call(){
                             <Col lg={7}>
                             <Row>
                                 <Col className="d-flex justify-content-start">
-                                <h5 className="text-white">Call Volume Rate(%)</h5>
+                                <h5 className="text-white">Call Volume Rate</h5>
                                 </Col>
                             </Row>
                             <Row>
@@ -175,7 +175,7 @@ export default function Call(){
                             <Col lg={8}>
                             <Row>
                                 <Col className="d-flex justify-content-start">
-                                <h5 className="text-white">Answered Calls Rate(%)</h5>
+                                <h5 className="text-white">Answered Calls Rate</h5>
                                 </Col>
                             </Row>
                             <Row>
@@ -196,7 +196,7 @@ export default function Call(){
                             <Col lg={7}>
                             <Row>
                                 <Col className="d-flex justify-content-start">
-                                <h5 className="text-white">Missed Calls Rate(%)</h5>
+                                <h5 className="text-white">Missed Calls Rate</h5>
                                 </Col>
                             </Row>
                             <Row>
@@ -217,7 +217,7 @@ export default function Call(){
                             <Col lg={8}>
                             <Row>
                                 <Col className="d-flex justify-content-start">
-                                <h5 className="text-white"> Abandoned Calls Rate(%)</h5>
+                                <h5 className="text-white"> Abandoned Calls Rate</h5>
                                 </Col>
                             </Row>
                             <Row>
@@ -243,7 +243,7 @@ export default function Call(){
                                 <Col lg={7}>
                                 <Row>
                                     <Col className="d-flex justify-content-start">
-                                    <h5 className="text-white">Call Duration Rate(%)</h5>
+                                    <h5 className="text-white">Call Duration Rate</h5>
                                     </Col>
                                 </Row>
                                 <Row>
@@ -259,14 +259,14 @@ export default function Call(){
                         </Card>
                     </Col>
                   </Row>
-                  <Row className="mt-1">
+                  <Row className="mt-2">
                     <Col>
                     <Card className="p-2" style={{backgroundColor:"#002151"}}>
                             <Row>
                                 <Col lg={7}>
                                 <Row>
                                     <Col className="d-flex justify-content-start">
-                                    <h5 className="text-white">Call routing data Rate(%)</h5>
+                                    <h5 className="text-white">Call routing data Rate</h5>
                                     </Col>
                                 </Row>
                                 <Row>
@@ -282,14 +282,14 @@ export default function Call(){
                         </Card>
                     </Col>
                   </Row>
-                  <Row className="mt-1">
+                  <Row className="mt-2">
                     <Col>
                     <Card className="p-2" style={{backgroundColor:"#002151"}}>
                             <Row>
                                 <Col lg={7}>
                                 <Row>
                                     <Col className="d-flex justify-content-start">
-                                    <h5 className="text-white">Call center efficiency Rate(%)</h5>
+                                    <h5 className="text-white">Call center efficiency Rate</h5>
                                     </Col>
                                 </Row>
                                 <Row>
@@ -306,17 +306,17 @@ export default function Call(){
                     </Col>
                   </Row>
                 </Col>
-                <Col lg={4}>
-                <Card className="p-3" style={{backgroundColor:"#002151"}}> 
+                <Col lg={3}>
+                <Card className="p-3" style={{backgroundColor:"#002151",height:"333px"}}> 
                 <Row>
                   <Col className="d-flex justify-content-center">
-                  <ReactApexChart options={optionsdount} series={seriesdount} type="donut"  width={410} />
+                  <ReactApexChart options={optionsdount} series={seriesdount} type="donut"  width={350} />
                   </Col>
                 </Row>
                  
                 </Card>
                 </Col>
-                <Col lg={5}>
+                <Col lg={6}>
                 <Card className="p-2" style={{backgroundColor:"#002151"}}> 
                 <ReactApexChart options={optionss} series={seriess} type="line" height={310} />
                 </Card>

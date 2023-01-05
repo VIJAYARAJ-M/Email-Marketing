@@ -627,7 +627,7 @@ export default function Model2(){
                
                     <Row>
                         <Col className="">
-                        <h4 className="text-white">Open Rate(%)</h4>
+                        <h4 className="text-white">Open Rate</h4>
                         </Col>
                     </Row>
                     <Row>
@@ -653,7 +653,7 @@ export default function Model2(){
                
                     <Row>
                         <Col className="">
-                        <h4 className="text-white">Unopened Rate(%)</h4>
+                        <h4 className="text-white">Unopened Rate</h4>
                         </Col>
                     </Row>
                     <Row>
@@ -698,7 +698,7 @@ export default function Model2(){
                 
                       <Row>
                           <Col className="">
-                          <h4 className="text-white">Spam Rate(%)</h4>
+                          <h4 className="text-white">Spam Rate</h4>
                           </Col>
                       </Row>
                       <Row>
@@ -724,7 +724,7 @@ export default function Model2(){
                 
                       <Row>
                           <Col className="">
-                          <h4 className="text-white">Unsubscribe Rate(%)</h4>
+                          <h4 className="text-white">Unsubscribe Rate</h4>
                           </Col>
                       </Row>
                       <Row>
@@ -744,7 +744,7 @@ export default function Model2(){
               <Row>
               <Col>
                 <Card className="p-2" style={{backgroundColor:"#002151"}}>
-                <ReactApexChart options={optionssclick} series={seriessclick} type="line" height={220} />
+                <ReactApexChart options={optionssclick} series={seriessclick} type="line" height={197} />
 
                 </Card>
                 </Col>

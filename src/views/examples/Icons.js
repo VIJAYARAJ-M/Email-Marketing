@@ -153,25 +153,25 @@ const Icons = () => {
           
             
         
-        <Tabs defaultActiveKey="email1" className="mt--4">
+        <Tabs defaultActiveKey="email3" className="mt--4">
           <Tab eventKey="home" title="Home">
            <Home/>
           </Tab>
 
-          <Tab eventKey="email1" title="Email 1">
+          {/* <Tab eventKey="email1" title="Email 1">
            <Email1/>
           </Tab>
 
           <Tab eventKey="email2" title="Email 2">
            <Email2/>
-          </Tab>
-          <Tab eventKey="email3" title="Email 3">
+          </Tab> */} 
+          <Tab eventKey="email3" title="Email Campaign">
            <Email3/>
           </Tab>
-          <Tab eventKey="email4" title="Email 4">
+          {/* <Tab eventKey="email4" title="Email 4">
           <Email4/>
           </Tab>
-          
+           */}
           
           
           

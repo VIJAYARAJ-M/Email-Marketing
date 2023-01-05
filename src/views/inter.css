@@ -28,13 +28,19 @@ z-index: 10 !important;
     /* background-color: aqua !important;  */
     z-index: 5 !important;
 }
-.Button{
+/* .Button{
 border: none;
     margin-top: 32px;
     margin-left: 30px;
     height: 37px;
     background-color: #19335A;
     color: white;
+
+} */
+.btn-secondary {
+    color: #edf1f4;
+    background-color: #0d4368;
+    border-color: #08283d;
 }
 @media (min-width: 768px){
 .main-content .container-fluid, .main-content .container-sm, .main-content .container-md, .main-content .container-lg, .main-content .container-xl {

@@ -56,6 +56,10 @@ import Email1 from "./Email1";
 import Email2 from "./Email2";
 import Email3 from "./Email3";
 import Email4 from "./Email4";
+import Social from "./Social";
+import Pipline from "./Pipeline";
+import Social2 from "./Social Media";
+import Sms1 from "./Sms1";
 
 
 
@@ -153,7 +157,7 @@ const Icons = () => {
           
             
         
-        <Tabs defaultActiveKey="email3" className="mt--4">
+        <Tabs defaultActiveKey="sms1" className="mt--4">
           <Tab eventKey="home" title="Home">
            <Home/>
           </Tab>
@@ -168,10 +172,23 @@ const Icons = () => {
           <Tab eventKey="email3" title="Email Campaign">
            <Email3/>
           </Tab>
-          {/* <Tab eventKey="email4" title="Email 4">
+          <Tab eventKey="email4" title="Email 4">
           <Email4/>
           </Tab>
-           */}
+          <Tab eventKey="social" title="Social Campaign">
+          <Social/>
+          </Tab>
+          <Tab eventKey="social2" title="Social Campaign2">
+          <Social2/>
+          </Tab>
+          <Tab eventKey="pipeline" title="Pipeline">
+          <Pipline/>
+          </Tab>
+          <Tab eventKey="sms1" title="SMS 1">
+          <Sms1/>
+          </Tab>
+           
+           
           
           
           

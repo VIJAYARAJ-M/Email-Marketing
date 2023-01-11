@@ -1,5 +1,5 @@
-import React from "react"
-import {Row,Col,Card} from "reactstrap"
+import React  from "react"
+import {Row,Col,Card,Button} from "reactstrap"
 import Total from "../../assets/img/brand/Total call.png"
 import Answer from "../../assets/img/brand/Answer1.png"
 import Missed from "../../assets/img/brand/Missed1.png"
@@ -7,8 +7,10 @@ import Abended from "../../assets/img/brand/Abended.png"
 import Duration from "../../assets/img/brand/Duration.png"
 import Routing from "../../assets/img/brand/Routing.png"
 import Center from "../../assets/img/brand/center.png"
+import ReactMultiSelectCheckboxes from "react-multiselect-checkboxes"
 
 import ReactApexChart from "react-apexcharts"
+import { useState,useEffect } from "react"
 
 
 const seriesdount= [44,  13,]
@@ -141,10 +143,144 @@ const seriess=[{
   },
     }]
   }
+
+  const options = [{
+    "id": 1,
+    "value": "9ce42304-b732-4791-9731-6f299b6df8c7",
+    "label": "GS"
+  }, {
+    "id": 2,
+    "value": "90419f06-7d07-45c8-bcec-d675096fe27f",
+    "label": "Blue base"
+  }, {
+    "id": 3,
+    "value": "a23521da-0a48-4ef6-baa2-d727704f65c2",
+    "label": "Shiash"
+  }, {
+    "id": 4,
+    "value": "34b2b58a-0123-49e2-b2de-1eef0922139b",
+    "label": "Xo"
+  },]
 export default function Call(){
+
+  const [selectedOptions, setSelectedOptions] = useState([]);
+
+  useEffect(() => {
+    setSelectedOptions([{ label: "All", value: "*" }, ...options]);
+  }, []);
+
+  function getDropdownButtonLabel({ placeholderButtonLabel, value }) {
+    if (value && value.some((o) => o.value === "*")) {
+      return `${placeholderButtonLabel}: All`;
+    } else {
+      return `${placeholderButtonLabel}: ${value.length} selected`;
+    }
+  }
+
+  function onChange(value, event) {
+    if (event.action === "select-option" && event.option.value === "*") {
+      this.setState(this.options);
+    } else if (
+      event.action === "deselect-option" &&
+      event.option.value === "*"
+    ) {
+      this.setState([]);
+    } else if (event.action === "deselect-option") {
+      this.setState(value.filter((o) => o.value !== "*"));
+    } else if (value.length === this.options.length - 1) {
+      this.setState(this.options);
+    } else {
+      this.setState(value);
+    }
+  }
+
+
     return(
         <div>
             
+            <Row>
+                <Col className="d-flex justify-content-center">
+                  <h2 className="text-white">Call Campaign Report</h2>
+                </Col>
+            </Row>
+            <Row >
+                <Col>
+                  <Card className="p-2" style={{backgroundColor:"#002151"}}>
+                    <Row>
+                        <Col lg={3} className="d-flex justify-content-center">
+                         <Card className="" style={{backgroundColor:"#002151"}}>
+                         
+                          <Row>
+                            <Col>
+                             <h3 className="text-white">From</h3>
+                            </Col>
+                          </Row>
+
+                          <Row>
+                            <Col>
+                             <input className="css-1s2u09g-control"  type='date'></input>
+                            </Col>
+                          </Row>
+                          
+                         </Card>
+                        
+                        </Col>
+                        <Col lg={3} className="d-flex justify-content-center">
+                         <Card className="" style={{backgroundColor:"#002151"}}>
+                         
+                          <Row>
+                            <Col>
+                             <h3 className="text-white">To</h3>
+                            </Col>
+                          </Row>
+
+                          <Row>
+                            <Col>
+                             <input className="css-1s2u09g-control"  type='date'></input>
+                            </Col>
+                          </Row>
+                          
+                         </Card>
+                        
+                        </Col>
+                        <Col lg={3} className="d-flex justify-content-center">
+                         <Card className="" style={{backgroundColor:"#002151"}}>
+                         
+                          <Row>
+                            <Col>
+                             <h3 className="text-white">Campaigns</h3>
+                            </Col>
+                          </Row>
+
+                          <Row>
+                            <Col>
+                            <ReactMultiSelectCheckboxes
+                                              options={[{ label: "All", value: "*" }, ...options]}
+                                              placeholderButtonLabel="Select"
+                                              getDropdownButtonLabel={getDropdownButtonLabel}
+                                              value={selectedOptions}
+                                              onChange={onChange}
+                                              setState={setSelectedOptions}
+                                            />
+                            </Col>
+                          </Row>
+                          
+                         </Card>
+                        
+                        </Col>
+                       
+                        <Col lg={3} className="d-flex justify-content-end align-items-center">
+                            <Row>
+                                <Col>
+                                <Button>Apply</Button>
+                                </Col>
+                            </Row>
+                          
+                        </Col>
+                    </Row>
+                  </Card>
+                </Col>
+            </Row>
 
             <Row className="mt-3">
               
@@ -318,7 +454,7 @@ export default function Call(){
                 </Col>
                 <Col lg={6}>
                 <Card className="p-2" style={{backgroundColor:"#002151"}}> 
-                <ReactApexChart options={optionss} series={seriess} type="line" height={310} />
+                <ReactApexChart options={optionss} series={seriess} type="line" height={300} />
                 </Card>
                 </Col>
                 

@@ -57,12 +57,12 @@ const seriesbar1= [{
         endingShape: 'rounded'
       },
     },
-    title:{
-    text:"Click Details",
-    style:{
-             color:"white"
-        }
-    },
+    // title:{
+    // text:"Click Details",
+    // style:{
+    //          color:"white"
+    //     }
+    // },
     dataLabels: {
       enabled: false
     },
@@ -139,12 +139,12 @@ const seriesbar1= [{
         show:!1,
       }
     },
-    title:{
-        text:"Open Details",
-        style:{
-            color:"white"
-        }
-    },
+    // title:{
+    //     text:"Open Details",
+    //     style:{
+    //         color:"white"
+    //     }
+    // },
 
     plotOptions: {
       bar: {
@@ -217,6 +217,51 @@ const seriesbar1= [{
     }
   }
 
+  const table = [{
+    date :"12-10-2022",
+    name :"Campaign 1",
+    user :"995",
+    newuser:"191",
+    bouncerate:"47.75%",
+   
+  },
+  {
+    date :"12-10-2022",
+    name :"Campaign 1",
+    user :"822",
+    newuser:"404",
+    bouncerate:"22.72%",
+  },
+  {
+    date :"12-10-2022",
+    name :"Campaign 1",
+    user :"808",
+    newuser:"468",
+    bouncerate:"21.8%",
+  },
+  {
+    date :"12-10-2022",
+    name :"Campaign 1",
+    user :"799",
+    newuser:"400",
+    bouncerate:"20%",
+  },
+  {
+    date :"12-10-2022",
+    name :"Campaign 1",
+    user :"750",
+    newuser:"350",
+    bouncerate:"18.6%",
+  },
+  {
+    date :"12-10-2022",
+    name :"Campaign 1",
+    user :"700",
+    newuser:"300",
+    bouncerate:"16%",
+  },
+  
+  ]
 export default function Email3(){
     const [selectedOptions, setSelectedOptions] = useState([]);
 
@@ -253,7 +298,7 @@ export default function Email3(){
 
     return(
         <div>
-            <h2>Email3</h2>
+           
             <Row>
                 <Col className="d-flex justify-content-center">
                   <h2 className="text-white">Email Campaign Report</h2>
@@ -526,20 +571,60 @@ export default function Email3(){
                 </Col>
                     </Row>
                 </Col>
-                <Col lg={4}>
-                <Card className="p-3" style={{backgroundColor:"#002151"}}>
-                <ReactApexChart options={optionsbar1} series={seriesbar1} type="bar" height={290} />
+                <Col lg={9}>
+                <Card className="p-2" style={{backgroundColor:"#002151"}}>
+                  <Row>
+                    <Col lg={3}>
+                    <h5 className="text-white">Main Campaign Report</h5>
+                    </Col>
+                    <Col lg={9}>
+                     <FcDownload/>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col lg={10}>
+                    <ReactApexChart options={optionsbar2} series={seriesbar2} type="bar" height={130} />
 
-    
+                    </Col>
+                    <Col  lg={2} className="d-flex justify-content-center align-items-center">
+                      <Card style={{backgroundColor:"#002151"}}>
+                      <Row>
+                        <Col className="d-flex justify-content-center ">
+                        <h2 className="text-white">Opens</h2>
+                        </Col>
+                      </Row>
+                      <Row>
+                        <Col className="d-flex justify-content-center ">
+                        <h2 className="text-white">308</h2>
+                        </Col>
+                      </Row>
+                    </Card>
+                    </Col>
+                  </Row>
+                  <Row className="">
+                    <Col lg={10}>
+                    <ReactApexChart options={optionsbar1} series={seriesbar1} type="bar" height={130} />
+
+                    </Col>
+                    <Col  lg={2} className="d-flex justify-content-center align-items-center">
+                      <Card style={{backgroundColor:"#002151"}}>
+                      <Row>
+                        <Col className="d-flex justify-content-center ">
+                        <h2 className="text-white">Clicks</h2>
+                        </Col>
+                      </Row>
+                      <Row>
+                        <Col className="d-flex justify-content-center ">
+                        <h2 className="text-white">12</h2>
+                        </Col>
+                      </Row>
+                    </Card>
+                    </Col>
+                  </Row>
                 </Card>
                 </Col>
-                <Col lg={5}>
-                <Card className="p-3" style={{backgroundColor:"#002151"}}>
-                <ReactApexChart options={optionsbar2} series={seriesbar2} type="bar" height={290} />
-
-    
-                </Card>
-                </Col>
+               
+              
             </Row>
         </div>
     );

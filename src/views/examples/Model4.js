@@ -1,5 +1,5 @@
 import React from "react"
-import {Row, Col, Card, Table, CardHeader} from "reactstrap"
+import {Row, Col, Card, Table, CardHeader,Button} from "reactstrap"
 import ReactApexChart from "react-apexcharts"
 
 import { HiUsers } from 'react-icons/hi'
@@ -546,8 +546,67 @@ export default function Model4(){
 
     return(
         <div>
+              <Row>
+                <Col className="d-flex justify-content-center">
+                  <h2 className="text-white">Mass Email Performance Report</h2>
+                </Col>
+            </Row>
+             <Row  className="mt-2">
+                <Col>
+                  <Card className="p-2" style={{backgroundColor:"#002151"}}>
+                    <Row>
+                        <Col lg={3} className="d-flex justify-content-center">
+                         <Card className="" style={{backgroundColor:"#002151"}}>
+                         
+                          <Row>
+                            <Col>
+                             <h3 className="text-white">From</h3>
+                            </Col>
+                          </Row>
 
-            <Row className="mt-4">
+                          <Row>
+                            <Col>
+                             <input className="css-1s2u09g-control"  type='date'></input>
+                            </Col>
+                          </Row>
+                          
+                         </Card>
+                        
+                        </Col>
+                        <Col lg={3} className="d-flex justify-content-center">
+                         <Card className="" style={{backgroundColor:"#002151"}}>
+                         
+                          <Row>
+                            <Col>
+                             <h3 className="text-white">To</h3>
+                            </Col>
+                          </Row>
+
+                          <Row>
+                            <Col>
+                             <input className="css-1s2u09g-control"  type='date'></input>
+                            </Col>
+                          </Row>
+                          
+                         </Card>
+                        
+                        </Col>
+                      
+                       
+                        <Col lg={6} className="d-flex justify-content-end align-items-center">
+                            <Row>
+                                <Col>
+                                <Button>Apply</Button>
+                                </Col>
+                            </Row>
+                          
+                        </Col>
+                    </Row>
+                  </Card>
+                </Col>
+            </Row>
+
+            <Row className="mt-2">
                 <Col lg={3}>
                  
                   <Card className="p-3" style={{backgroundColor:"#002151"}}>

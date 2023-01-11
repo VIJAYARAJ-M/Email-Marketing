@@ -1,5 +1,5 @@
 import React from "react"
-import {Row, Col, Card} from "reactstrap"
+import {Row, Col, Card,Button} from "reactstrap"
 import ReactApexChart from "react-apexcharts"
 import Twitter from "../../assets/img/brand/Twitter.png"
 import Person from "../../assets/img/brand/person.png"
@@ -13,57 +13,71 @@ import Click from "../../assets/img/brand/Clicks.png"
 import Facebook from "../../assets/img/brand/Facebook.png"
 import Commands from "../../assets/img/brand/Commands.png"
 
-const seriescolumn= [{
+
+ const seriesstack= [{
     name: 'Twitter',
-    data: [44, 55, 41, 67, 22, 43, 21, 49]
+    data: [44, 55, 41, 37, 22]
   }, {
     name: 'Instagram',
-    data: [13, 23, 20, 8, 13, 27, 33, 12]
+    data: [53, 32, 33, 52, 13]
   }, {
     name: 'LinkedIn',
-    data: [11, 17, 15, 15, 21, 14, 15, 13]
-  },{
+    data: [12, 17, 11, 9, 15]
+  }, {
     name: 'Facebook',
-    data: [11, 17, 15, 15, 21, 14, 15, 13]
-  }]
-
- const optionscolumn= {
+    data: [9, 7, 5, 8, 6]
+  }, ]
+ const optionsstack= {
     chart: {
       type: 'bar',
       height: 350,
       stacked: true,
-      stackType: '100%',
       toolbar:{
         show:!1,
       }
     },
-    responsive: [{
-      breakpoint: 480,
-      options: {
-        legend: {
-          position: 'bottom',
-          offsetX: -10,
-          offsetY: 0
+    plotOptions: {
+      bar: {
+        horizontal: true,
+        dataLabels: {
+          total: {
+            enabled: true,
+            offsetX: 0,
+            style: {
+              fontSize: '13px',
+              fontWeight: 900
+            }
+          }
         }
-      }
-    }],
-    
-    xaxis: {
-      categories: ['Jan', 'Feb', 'Mar', 'App', 'May', 'Jun',
-        'Jul', 'Aug'
-      ],
+      },
+    },
+    stroke: {
+      width: 0,
+      colors: ['#fff']
+    },
+    title: {
+      text: 'Social Values',
       style:{
         color:"white",
-      },labels:{
-        style:{
-          colors:"white",
-          
+      }
+    },
+    xaxis: {
+        categories: ['01-02-2023', '01-03-2023', '01-04-2023', '01-05-2023',
+        '01-06-2023'
+      ],
+      labels: {
+        formatter: function (val) {
+          return val + "K"
         },
-  },
+        style:{
+            colors:"white",
+            
+          },
+      }
     },
     yaxis: {
         title: {
-          text: 'Count',
+          text: '',
           style:{
             color:"white",
           },
@@ -76,34 +90,98 @@ const seriescolumn= [{
           },
     },
       },
-     
-    
+    tooltip: {
+      y: {
+        formatter: function (val) {
+          return val + "K"
+        }
+      }
+    },
     fill: {
       opacity: 1
     },
     legend: {
-      position: 'right',
-      offsetX: 0,
-      offsetY: 50,
-      labels: {
-    
-        colors:"white",
-        
-        }
-    },
+        position: 'right',
+        offsetX: -10,
+        offsetY: 50,
+        labels: {
+      
+          colors:"white",
+          
+          }
+      },
   }
 export default function Social(){
     return(
         <div>
-            <h3>Social</h3>
             <Row>
-                <Col lg={6}>
+                <Col className="d-flex justify-content-center ">
+                <h2 className="text-white">Social Media Campaign</h2>
+                </Col>
+            </Row>
+            <Row  className="">
+                <Col>
+                  <Card className="p-2" style={{backgroundColor:"#002151"}}>
+                    <Row>
+                        <Col lg={3} className="d-flex justify-content-center">
+                         <Card className="" style={{backgroundColor:"#002151"}}>
+                         
+                          <Row>
+                            <Col>
+                             <h3 className="text-white">From</h3>
+                            </Col>
+                          </Row>
+
+                          <Row>
+                            <Col>
+                             <input className="css-1s2u09g-control"  type='date'></input>
+                            </Col>
+                          </Row>
+                          
+                         </Card>
+                        
+                        </Col>
+                        <Col lg={3} className="d-flex justify-content-center">
+                         <Card className="" style={{backgroundColor:"#002151"}}>
+                         
+                          <Row>
+                            <Col>
+                             <h3 className="text-white">To</h3>
+                            </Col>
+                          </Row>
+
+                          <Row>
+                            <Col>
+                             <input className="css-1s2u09g-control"  type='date'></input>
+                            </Col>
+                          </Row>
+                          
+                         </Card>
+                        
+                        </Col>
+                      
+                       
+                        <Col lg={6} className="d-flex justify-content-end align-items-center">
+                            <Row>
+                                <Col>
+                                <Button>Apply</Button>
+                                </Col>
+                            </Row>
+                          
+                        </Col>
+                    </Row>
+                  </Card>
+                </Col>
+            </Row>
+
+            <Row className="mt-1">
+                <Col lg={4}>
                 <Card className="p-3" style={{backgroundColor:"#002151"}}>
                     <Row>
-                        <Col lg={1}>
+                        <Col lg={2}>
                           <img src={Twitter} height={30}/>
                         </Col>
-                        <Col lg={11}>
+                        <Col lg={10}>
                           <h3 className="text-white">Twitter Status</h3>
                         </Col>
                     </Row>
@@ -112,7 +190,7 @@ export default function Social(){
                         <Card style={{backgroundColor:"#19335A"}}>
                             <Row>
                                 <Col className="d-flex justify-content-center">
-                                 <img src={Person} height={50}/>
+                                 <img src={Person} height={30}/>
                                 </Col>
                                 
                             </Row>
@@ -124,7 +202,7 @@ export default function Social(){
                             </Row>
                             <Row>
                                 <Col className="d-flex justify-content-center">
-                                <h1 className="text-white">20,000</h1>
+                                <h4 className="text-white">20,000</h4>
                                 </Col>
                                 
                             </Row>
@@ -135,7 +213,7 @@ export default function Social(){
                         <Card style={{backgroundColor:"#19335A"}}>
                             <Row>
                                 <Col className="d-flex justify-content-center">
-                                 <img src={New} height={50}/>
+                                 <img src={New} height={30}/>
                                 </Col>
                                 
                             </Row>
@@ -147,7 +225,7 @@ export default function Social(){
                             </Row>
                             <Row>
                                 <Col className="d-flex justify-content-center">
-                                <h1 className="text-white">167</h1>
+                                <h4 className="text-white">167</h4>
                                 </Col>
                                 
                             </Row>
@@ -160,7 +238,7 @@ export default function Social(){
                         <Card style={{backgroundColor:"#19335A"}}>
                             <Row>
                                 <Col className="d-flex justify-content-center">
-                                 <img src={Twitter} height={50}/>
+                                 <img src={Twitter} height={30}/>
                                 </Col>
                                 
                             </Row>
@@ -172,7 +250,7 @@ export default function Social(){
                             </Row>
                             <Row>
                                 <Col className="d-flex justify-content-center">
-                                <h1 className="text-white">200</h1>
+                                <h4 className="text-white">200</h4>
                                 </Col>
                                 
                             </Row>
@@ -183,7 +261,7 @@ export default function Social(){
                         <Card style={{backgroundColor:"#19335A"}}>
                             <Row>
                                 <Col className="d-flex justify-content-center">
-                                 <img src={Fav} height={50}/>
+                                 <img src={Fav} height={30}/>
                                 </Col>
                                 
                             </Row>
@@ -195,7 +273,7 @@ export default function Social(){
                             </Row>
                             <Row>
                                 <Col className="d-flex justify-content-center">
-                                <h1 className="text-white">4,000</h1>
+                                <h4 className="text-white">4,000</h4>
                                 </Col>
                                 
                             </Row>
@@ -205,14 +283,14 @@ export default function Social(){
                     </Row>
                 </Card>
                 </Col>
-                <Col lg={6}>
+                <Col lg={4}>
                 <Card className="p-3" style={{backgroundColor:"#002151"}}>
                     <Row>
-                        <Col lg={1}>
+                        <Col lg={2}>
                           <img src={Insta} height={30}/>
                         </Col>
-                        <Col lg={11}>
-                          <h3 className="text-white">Instagram</h3>
+                        <Col lg={10}>
+                          <h3 className="text-white">Instagram Status</h3>
                         </Col>
                     </Row>
                     <Row className="mt-2">
@@ -220,7 +298,7 @@ export default function Social(){
                         <Card style={{backgroundColor:"#19335A"}}>
                             <Row>
                                 <Col className="d-flex justify-content-center">
-                                 <img src={Person} height={50}/>
+                                 <img src={Person} height={30}/>
                                 </Col>
                                 
                             </Row>
@@ -232,7 +310,7 @@ export default function Social(){
                             </Row>
                             <Row>
                                 <Col className="d-flex justify-content-center">
-                                <h1 className="text-white">20,000</h1>
+                                <h4 className="text-white">20,000</h4>
                                 </Col>
                                 
                             </Row>
@@ -243,7 +321,7 @@ export default function Social(){
                         <Card style={{backgroundColor:"#19335A"}}>
                             <Row>
                                 <Col className="d-flex justify-content-center">
-                                 <img src={New} height={50}/>
+                                 <img src={New} height={30}/>
                                 </Col>
                                 
                             </Row>
@@ -255,7 +333,7 @@ export default function Social(){
                             </Row>
                             <Row>
                                 <Col className="d-flex justify-content-center">
-                                <h1 className="text-white">167</h1>
+                                <h4 className="text-white">167</h4>
                                 </Col>
                                 
                             </Row>
@@ -268,7 +346,7 @@ export default function Social(){
                         <Card style={{backgroundColor:"#19335A"}}>
                             <Row>
                                 <Col className="d-flex justify-content-center">
-                                 <img src={Like} height={50}/>
+                                 <img src={Like} height={30}/>
                                 </Col>
                                 
                             </Row>
@@ -280,7 +358,7 @@ export default function Social(){
                             </Row>
                             <Row>
                                 <Col className="d-flex justify-content-center">
-                                <h1 className="text-white">200</h1>
+                                <h4 className="text-white">200</h4>
                                 </Col>
                                 
                             </Row>
@@ -291,7 +369,7 @@ export default function Social(){
                         <Card style={{backgroundColor:"#19335A"}}>
                             <Row>
                                 <Col className="d-flex justify-content-center">
-                                 <img src={Post} height={50}/>
+                                 <img src={Post} height={30}/>
                                 </Col>
                                 
                             </Row>
@@ -303,7 +381,7 @@ export default function Social(){
                             </Row>
                             <Row>
                                 <Col className="d-flex justify-content-center">
-                                <h1 className="text-white">4,000</h1>
+                                <h4 className="text-white">4,000</h4>
                                 </Col>
                                 
                             </Row>
@@ -313,16 +391,13 @@ export default function Social(){
                     </Row>
                 </Card>
                 </Col>
-            </Row>
-
-            <Row className="mt-3">
-            <Col lg={6}>
+                <Col lg={4}>
                 <Card className="p-3" style={{backgroundColor:"#002151"}}>
                     <Row>
-                        <Col lg={1}>
+                        <Col lg={2}>
                           <img src={Linked} height={30}/>
                         </Col>
-                        <Col lg={11}>
+                        <Col lg={10}>
                           <h3 className="text-white">LinkedIn Status</h3>
                         </Col>
                     </Row>
@@ -331,7 +406,7 @@ export default function Social(){
                         <Card style={{backgroundColor:"#19335A"}}>
                             <Row>
                                 <Col className="d-flex justify-content-center">
-                                 <img src={Person} height={50}/>
+                                 <img src={Person} height={30}/>
                                 </Col>
                                 
                             </Row>
@@ -343,7 +418,7 @@ export default function Social(){
                             </Row>
                             <Row>
                                 <Col className="d-flex justify-content-center">
-                                <h1 className="text-white">3,000</h1>
+                                <h4 className="text-white">3,000</h4>
                                 </Col>
                                 
                             </Row>
@@ -354,7 +429,7 @@ export default function Social(){
                         <Card style={{backgroundColor:"#19335A"}}>
                             <Row>
                                 <Col className="d-flex justify-content-center">
-                                 <img src={New} height={50}/>
+                                 <img src={New} height={30}/>
                                 </Col>
                                 
                             </Row>
@@ -366,7 +441,7 @@ export default function Social(){
                             </Row>
                             <Row>
                                 <Col className="d-flex justify-content-center">
-                                <h1 className="text-white">12</h1>
+                                <h4 className="text-white">12</h4>
                                 </Col>
                                 
                             </Row>
@@ -379,7 +454,7 @@ export default function Social(){
                         <Card style={{backgroundColor:"#19335A"}}>
                             <Row>
                                 <Col className="d-flex justify-content-center">
-                                 <img src={Click} height={50}/>
+                                 <img src={Click} height={30}/>
                                 </Col>
                                 
                             </Row>
@@ -391,7 +466,7 @@ export default function Social(){
                             </Row>
                             <Row>
                                 <Col className="d-flex justify-content-center">
-                                <h1 className="text-white">200</h1>
+                                <h4 className="text-white">200</h4>
                                 </Col>
                                 
                             </Row>
@@ -402,7 +477,7 @@ export default function Social(){
                         <Card style={{backgroundColor:"#19335A"}}>
                             <Row>
                                 <Col className="d-flex justify-content-center">
-                                 <img src={Like} height={50}/>
+                                 <img src={Like} height={30}/>
                                 </Col>
                                 
                             </Row>
@@ -414,115 +489,7 @@ export default function Social(){
                             </Row>
                             <Row>
                                 <Col className="d-flex justify-content-center">
-                                <h1 className="text-white">400</h1>
-                                </Col>
-                                
-                            </Row>
-                            
-                        </Card>
-                        </Col>
-                    </Row>
-                </Card>
-                </Col>
-                <Col lg={6}>
-                <Card className="p-3" style={{backgroundColor:"#002151"}}>
-                    <Row>
-                        <Col lg={1}>
-                          <img src={Facebook} height={30}/>
-                        </Col>
-                        <Col lg={11}>
-                          <h3 className="text-white">Facebook Status</h3>
-                        </Col>
-                    </Row>
-                    <Row className="mt-2">
-                        <Col>
-                        <Card style={{backgroundColor:"#19335A"}}>
-                            <Row>
-                                <Col className="d-flex justify-content-center">
-                                 <img src={Person} height={50}/>
-                                </Col>
-                                
-                            </Row>
-                            <Row>
-                                <Col className="d-flex justify-content-center">
-                                <h5 className="text-white">Fans</h5>
-                                </Col>
-                                
-                            </Row>
-                            <Row>
-                                <Col className="d-flex justify-content-center">
-                                <h1 className="text-white">20,000</h1>
-                                </Col>
-                                
-                            </Row>
-                            
-                        </Card>
-                        </Col>
-                        <Col>
-                        <Card style={{backgroundColor:"#19335A"}}>
-                            <Row>
-                                <Col className="d-flex justify-content-center">
-                                 <img src={New} height={50}/>
-                                </Col>
-                                
-                            </Row>
-                            <Row>
-                                <Col className="d-flex justify-content-center">
-                                <h5 className="text-white"> New Fans</h5>
-                                </Col>
-                                
-                            </Row>
-                            <Row>
-                                <Col className="d-flex justify-content-center">
-                                <h1 className="text-white">167</h1>
-                                </Col>
-                                
-                            </Row>
-                            
-                        </Card>
-                        </Col>
-                    </Row>
-                    <Row className="mt-2">
-                        <Col>
-                        <Card style={{backgroundColor:"#19335A"}}>
-                            <Row>
-                                <Col className="d-flex justify-content-center">
-                                 <img src={Like} height={50}/>
-                                </Col>
-                                
-                            </Row>
-                            <Row>
-                                <Col className="d-flex justify-content-center">
-                                <h5 className="text-white">Likes</h5>
-                                </Col>
-                                
-                            </Row>
-                            <Row>
-                                <Col className="d-flex justify-content-center">
-                                <h1 className="text-white">200</h1>
-                                </Col>
-                                
-                            </Row>
-                            
-                        </Card>
-                        </Col>
-                        <Col>
-                        <Card style={{backgroundColor:"#19335A"}}>
-                            <Row>
-                                <Col className="d-flex justify-content-center">
-                                 <img src={Commands} height={50}/>
-                                </Col>
-                                
-                            </Row>
-                            <Row>
-                                <Col className="d-flex justify-content-center">
-                                <h5 className="text-white">Commands</h5>
-                                </Col>
-                                
-                            </Row>
-                            <Row>
-                                <Col className="d-flex justify-content-center">
-                                <h1 className="text-white">40</h1>
+                                <h4 className="text-white">400</h4>
                                 </Col>
                                 
                             </Row>
@@ -534,13 +501,127 @@ export default function Social(){
                 </Col>
             </Row>
 
-            <Row className="mt-3">
-                <Col>
+            <Row className="mt-2">
+           
+                <Col lg={4}>
                 <Card className="p-3" style={{backgroundColor:"#002151"}}>
-                <ReactApexChart options={optionscolumn} series={seriescolumn} type="bar" height={350} />
+                    <Row>
+                        <Col lg={2}>
+                          <img src={Facebook} height={30}/>
+                        </Col>
+                        <Col lg={10}>
+                          <h3 className="text-white">Facebook Status</h3>
+                        </Col>
+                    </Row>
+                    <Row className="mt-2">
+                        <Col>
+                        <Card style={{backgroundColor:"#19335A"}}>
+                            <Row>
+                                <Col className="d-flex justify-content-center">
+                                 <img src={Person} height={30}/>
+                                </Col>
+                                
+                            </Row>
+                            <Row>
+                                <Col className="d-flex justify-content-center">
+                                <h5 className="text-white">Fans</h5>
+                                </Col>
+                                
+                            </Row>
+                            <Row>
+                                <Col className="d-flex justify-content-center">
+                                <h4 className="text-white">20,000</h4>
+                                </Col>
+                                
+                            </Row>
+                            
+                        </Card>
+                        </Col>
+                        <Col>
+                        <Card style={{backgroundColor:"#19335A"}}>
+                            <Row>
+                                <Col className="d-flex justify-content-center">
+                                 <img src={New} height={30}/>
+                                </Col>
+                                
+                            </Row>
+                            <Row>
+                                <Col className="d-flex justify-content-center">
+                                <h5 className="text-white"> New Fans</h5>
+                                </Col>
+                                
+                            </Row>
+                            <Row>
+                                <Col className="d-flex justify-content-center">
+                                <h4 className="text-white">167</h4>
+                                </Col>
+                                
+                            </Row>
+                            
+                        </Card>
+                        </Col>
+                    </Row>
+                    <Row className="mt-2">
+                        <Col>
+                        <Card style={{backgroundColor:"#19335A"}}>
+                            <Row>
+                                <Col className="d-flex justify-content-center">
+                                 <img src={Like} height={30}/>
+                                </Col>
+                                
+                            </Row>
+                            <Row>
+                                <Col className="d-flex justify-content-center">
+                                <h5 className="text-white">Likes</h5>
+                                </Col>
+                                
+                            </Row>
+                            <Row>
+                                <Col className="d-flex justify-content-center">
+                                <h4 className="text-white">200</h4>
+                                </Col>
+                                
+                            </Row>
+                            
+                        </Card>
+                        </Col>
+                        <Col>
+                        <Card style={{backgroundColor:"#19335A"}}>
+                            <Row>
+                                <Col className="d-flex justify-content-center">
+                                 <img src={Commands} height={30}/>
+                                </Col>
+                                
+                            </Row>
+                            <Row>
+                                <Col className="d-flex justify-content-center">
+                                <h5 className="text-white">Commands</h5>
+                                </Col>
+                                
+                            </Row>
+                            <Row>
+                                <Col className="d-flex justify-content-center">
+                                <h4 className="text-white">40</h4>
+                                </Col>
+                                
+                            </Row>
+                            
+                        </Card>
+                        </Col>
+                    </Row>
+                </Card>
+                </Col>
+                <Col lg={8}>
+                <Card className="p-3" style={{backgroundColor:"#002151"}}>
+                <ReactApexChart options={optionsstack} series={seriesstack} type="bar" height={213} />
+    
                 </Card>
                 </Col>
             </Row>
+
+            
+
+            
         </div>
     );
 }

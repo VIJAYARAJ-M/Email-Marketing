@@ -153,7 +153,7 @@ const table = [{
   },
   
   ]
-export default function Sms1(){
+export default function Sms(){
     return(
         <div>
             

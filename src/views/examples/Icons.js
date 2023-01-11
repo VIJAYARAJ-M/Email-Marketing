@@ -60,6 +60,7 @@ import Social from "./Social";
 import Pipline from "./Pipeline";
 import Social2 from "./Social Media";
 import Sms1 from "./Sms1";
+import Sms2 from "./Sms2";
 
 
 
@@ -186,6 +187,9 @@ const Icons = () => {
           </Tab>
           <Tab eventKey="sms1" title="SMS 1">
           <Sms1/>
+          </Tab>
+          <Tab eventKey="sms2" title="SMS 2">
+          <Sms2/>
           </Tab>
            
            

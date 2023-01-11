@@ -31,7 +31,7 @@ const optionsdount= {
   plotOptions: {
     pie: {
       donut: {
-        size: '65%'
+        size: '50%'
       }
     }
   },
@@ -299,7 +299,7 @@ export default function Sms1(){
                         <Col>
                         <Row>
                         <Col>
-                        <h5 className="text-white">Deliverd</h5>
+                        <h5 className="text-white">Delivered</h5>
                         </Col>
                     </Row>
                     <Row>

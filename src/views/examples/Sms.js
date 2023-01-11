@@ -31,13 +31,13 @@ const optionsdount= {
   plotOptions: {
     pie: {
       donut: {
-        size: '50%'
+        size: '60%'
       }
     }
   },
   legend: {
     display: true,
-    position: "bottom",
+    position: "right",
     labels: {
     
     colors:"white",
@@ -58,7 +58,7 @@ const optionsdount= {
 }
 const seriesline= [{
     name: "Desktops",
-    data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
+    data: [10, 41, 80, 10, 50, 80, 20, 40]
 }]
 const optionsline= {
   chart: {
@@ -78,7 +78,7 @@ const optionsline= {
     curve: 'smooth'
   },
   title: {
-    text: 'Messages',
+    text: 'Message Performance',
     align: 'left',
     style:{
         color:"white"
@@ -87,11 +87,18 @@ const optionsline= {
   grid: {
     row: {
       colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
-      opacity: 0.5
-    },
+      opacity: 0.0,
+      
+        },
+        xaxis: {
+          lines: {
+            show: false
+          }
+        }
   },
   xaxis: {
-    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+    categories: ['01-02-2023', '01-03-2023', '01-04-2023', '01-05-2023', 
+    '01-06-2023', '01-07-2023', '01-08-2023', '01-09-2023'],
     labels:{
         style:{
             colors:"white",
@@ -108,48 +115,53 @@ const optionsline= {
 }
 
 const table = [{
-    
+    name:"Summer Sale Alerts",
     date :"12-10-2022",
     from :"(548) 896-7609 x7219",
     to :"+1.909.349.0140",
     status:"Delivered",
-    direction:"Outbound",
+    direction:"Dial",
    
   },
   {
+    name:"New Arrivals Notification",
     date :"12-10-2022",
     from :"(548) 896-7609 x7219",
     to :"+1.909.349.0140",
     status:"Delivered",
-    direction:"Outbound",
+    direction:"Reply",
   },
   {
+    name:"Happy Hour Deals",
     date :"12-10-2022",
     from :"(548) 896-7609 x7219",
     to :"+1.909.349.0140",
     status:"Delivered",
-    direction:"Outbound",
+    direction:"Dial",
   },
   {
+    name:"Exclusive Discounts for Members",
     date :"12-10-2022",
     from :"(548) 896-7609 x7219",
     to :"+1.909.349.0140",
     status:"Delivered",
-    direction:"Outbound",
+    direction:"Reply",
   },
   {
+    name:"Flash Sale",
     date :"12-10-2022",
     from :"(548) 896-7609 x7219",
     to :"+1.909.349.0140",
     status:"Delivered",
-    direction:"Outbound",
+    direction:"Dial",
   },
   {
+    name:"Back to School Sale",
     date :"12-10-2022",
     from :"(548) 896-7609 x7219",
     to :"+1.909.349.0140",
     status:"Delivered",
-    direction:"Outbound",
+    direction:"Dial",
   },
   
   ]
@@ -160,7 +172,7 @@ export default function Sms(){
 
             <Row>
                 <Col className="d-flex justify-content-center">
-                 <h2 className="text-white">Sms campaign Report</h2>
+                 <h2 className="text-white">SMS Campaign Tracking Report</h2>
                 </Col>
             </Row>
 
@@ -233,7 +245,7 @@ export default function Sms(){
                     </Row>
                     <Row>
                         <Col>
-                        <h2 className="text-white">3,000</h2>
+                        <h2 className="text-white">3000</h2>
                         </Col>
                     </Row>
                         </Col>
@@ -280,7 +292,7 @@ export default function Sms(){
                     </Row>
                     <Row>
                         <Col>
-                        <h2 className="text-white">1,000</h2>
+                        <h2 className="text-white">1000</h2>
                         </Col>
                     </Row>
                     </Col>
@@ -343,7 +355,7 @@ export default function Sms(){
 
             <Row className="mt-2">
                 <Col lg={4}>
-                <Card className="" style={{backgroundColor:"#002151"}}>
+                <Card className="p-3" style={{backgroundColor:"#002151"}}>
                  <ReactApexChart options={optionsdount} series={seriesdount} type="donut"  width={300} />
                 </Card>
                 </Col>
@@ -376,7 +388,8 @@ export default function Sms(){
                             </CardHeader>
                             <Table className="align-items-center  table-flush" responsive >
                             <thead className="">
-                            <tr className="" style={{color:"#FFB178"}}>
+                            <tr className="" style={{color:"#7dbf57",backgroundColor:"#344d7f"}}>
+                                <th scope="col">Name</th>
                                 <th scope="col">Date</th>
                                 <th scope="col">From</th>
                                 <th scope="col">To</th>
@@ -389,7 +402,8 @@ export default function Sms(){
                             {table.map((item, index)=>(
                             <tbody  >
                             <tr key={index} className="text-white" >
-                                <td scope="row" href="#">{item.date}</td>
+                                <td>{item.name}</td>
+                                <td scope="row">{item.date}</td>
                                 <td scope="row">{item.from}</td>
                                 <td>{item.to}</td>
                                 <td>{item.status}</td>

@@ -10,7 +10,7 @@ import Open from "../../assets/img/brand/Openmsg.png"
 import Revenu from "../../assets/img/brand/Revenue.png"
 import Cross from "../../assets/img/brand/Cross.png"
 
-const seriesdountTotalcost= [44]
+const seriesdountTotalcost= [4000]
 
 const optionsTotalcost= {
   chart: {
@@ -35,18 +35,30 @@ const optionsTotalcost= {
     pie: {
       donut: {
         size: '60%',
-        // labels:{
-        //  show:true,
-        //  fontSize:"15px",
-        //  total:{
-        //     show:true,
-        //     fontSize:"15px",
-        //     color:"white"
-        //  },
-        // },
+        labels:{
+         show:true,
+         
+         
+         total:{
+         show:true,
+         fontSize:"15px",
+         color:"white",
+        
+      },
+      value: {
+        show: true,
+        color: 'white',
+        offsetY: 0,
+        fontSize: '15px'
       }
-    }
+     },
+      }
+    },
+   
   },
+ dataLabels:{
+    enabled:false,
+ },
   legend: {
     display: true,
     position: "bottom",

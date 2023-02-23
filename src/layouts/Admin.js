@@ -32,8 +32,6 @@ const Admin = (props) => {
   const mainContent = React.useRef(null);
   const location = useLocation();
 
-  
-
   React.useEffect(() => {
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
@@ -42,6 +40,8 @@ const Admin = (props) => {
 
   const getRoutes = (routes) => {
     return routes.map((prop, key) => {
+      console.log("d", prop)
+
       if (prop.layout === "/admin") {
         return (
           <Route
@@ -69,8 +69,9 @@ const Admin = (props) => {
   };
 
   return (
-  
+
     <>
+     
       <Sidebar
         {...props}
         routes={routes}
@@ -78,7 +79,7 @@ const Admin = (props) => {
           innerLink: "/admin/index",
           imgSrc: require("../assets/img/brand/SAAS.png").default,
           imgAlt: "...",
-          
+
         }}
       />
       <div className="main-content" ref={mainContent}>
@@ -88,14 +89,14 @@ const Admin = (props) => {
         />
         <Switch>
           {getRoutes(routes)}
-          <Redirect from="*" to="/admin/index" />
+          {/* <Redirect from="*" to="/admin/index" /> */}
         </Switch>
         <Container fluid>
           <AdminFooter />
         </Container>
       </div>
     </>
-    
+
   );
 };
 
